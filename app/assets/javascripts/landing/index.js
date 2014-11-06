@@ -38,7 +38,8 @@
             {
                 label: '50 Sunshine St, Gold Coast ', yield: '13%', description: ['Last rent paid on 3/2/2014'], outstanding: 0,
                 image: 'images/house4.jpeg'
-            }];
+            },
+        ];
 
         $scope.options = {thickness: 20};
 

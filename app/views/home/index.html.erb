@@ -3,6 +3,7 @@
   <main>
     <div class="heading">
 
+
       <header>
         <nav>
           <ul>
@@ -27,7 +28,11 @@
     </div>
 
     <div class="property-container" id="property">
-      <div class="add-property" id="showAddProperty"><i class="fa fa-plus-circle">&nbsp;</i></div>
+      <div class="add-property" id="showAddProperty">
+        <%= link_to new_property_path do %>
+          <i class="fa fa-plus-circle"></i>
+        <% end %>
+      </div>
 
       <div class="container">
         <h3><span>Properties</span></h3>
@@ -36,21 +41,22 @@
           <pie-chart data="data" options="options"></pie-chart>
         </div>
         <div>
-          <div ng-repeat="item in propertyList" class="property-list-container col-xs-6">
+          <% @properties.each do |prop| %>
+          <div class="property-list-container col-xs-6">
             <div style="background-image: url('{{item.image}}')">
               <div class="property-list-container-inner">
-                <div ng-show="item.outstanding" class="outstanding"><span>{{item.outstanding}}</span></div>
+                <div class="outstanding"><span><%= rand(5..30) %></span></div>
                 <div class="col-xs-9">
                   <div class="property-address">
-                    {{item.label}}
+                    <%= "#{prop.street_no} #{prop.street} #{prop.city} #{prop.post_code}" %>
                   </div>
                   <div class="property-description" ng-repeat="description in item.description">
-                    {{description}}
+                    desc
                   </div>
                 </div>
                 <div class="col-xs-3">
                   <div class="property-yield">
-                    {{item.yield}}
+                    <%= rand(1..8) %>%
                   </div>
                   <p class="property-label">yield</p>
                 </div>
@@ -58,6 +64,7 @@
               </div>
             </div>
           </div>
+          <% end %>
           <div class="clear"></div>
         </div>
       </div>
