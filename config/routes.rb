@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :transactions
 
-  resources :properties
+  resources :properties do
+    resource :transactions
+  end
+
+  resources :transactions
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   

@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
-  respond_to :html
-  
+  respond_to :html, :json
+
   def index
     @transactions = Transaction.all
     respond_with(@transactions)
@@ -12,6 +12,7 @@ class TransactionsController < ApplicationController
   end
 
   def new
+    @property = Property.find(params[:property_id])
     @transaction = Transaction.new
     respond_with(@transaction)
   end
@@ -20,9 +21,18 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @transaction = Transaction.new(transaction_params)
-    @transaction.save
-    respond_with(@transaction)
+    @property = Property.find(params[:property_id])
+    @transaction = @property.transactions.create(transaction_params)
+    respond_to do |format|
+      if @transaction.save
+        flash[:notice] = 'Transaction was successfully created.'
+        format.html { redirect_to(@transaction.property) }
+        format.json { render xml: @transaction }
+      else
+        format.html { render action: "new" }
+        format.json { render xml: @transaction }
+      end
+    end
   end
 
   def update
@@ -32,7 +42,16 @@ class TransactionsController < ApplicationController
 
   def destroy
     @transaction.destroy
-    respond_with(@transaction)
+    respond_to do |format|
+      if @transaction.save
+        flash[:notice] = 'Transaction was successfully deleted.'
+        format.html { redirect_to(@transaction.property) }
+        format.json { render xml: @transaction }
+      else
+        format.html { render action: "new" }
+        format.json { render xml: @transaction }
+      end
+    end
   end
 
   private
@@ -41,6 +60,6 @@ class TransactionsController < ApplicationController
     end
 
     def transaction_params
-      params.require(:transaction).permit(:income_type, :outgoing, :value, :fequency, :last_due)
+      params.require(:transaction).permit(:income_type, :outgoing, :value, :fequency, :last_due, :property_id)
     end
 end

@@ -6,6 +6,7 @@ class CreateTransactions < ActiveRecord::Migration
       t.decimal :value
       t.string :fequency
       t.date :last_due
+      t.integer :property_id
 
       t.timestamps
     end
