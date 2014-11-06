@@ -41,10 +41,11 @@ class ImageController < ApplicationController
       @response = JSON.parse(@json_response)
     end
 
-    unless @response['property'].blank?
+    if @response['property'].blank?
+      respond_with('Not found')
+    else
       respond_with(@response['property']['propertyPhotoList'].first['mediumPhotoUrl'])
     end
-    respond_with('Not found')
   end
 
 end
