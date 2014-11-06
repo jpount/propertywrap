@@ -14,10 +14,7 @@
         <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= @response['property']['coordinate']['latitude'] %>,<%= @response['property']['coordinate']['longitude'] %>&zoom=17&size=300x200&markers=color:black%7Clabel:S%7C-33.86623652,151.20202839">
     </div>
 
-
-
-
-    <!--
+    <script>
 
     var map;
 function initialize() {
@@ -44,7 +41,8 @@ function autoRotate() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-    -->
+
+    </script>
 
     <br>
 
@@ -53,18 +51,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <h4>Property</h4>
 
       <div class="list-group">
-        <!--
-
-        <%= @response['property']['attributes'] %>
-
-        <% @response['property']['attributes'].each do |attribute| %>
-
-        <a href="javascript:;" class="list-group-item">
-          <%= attribute %>
-          <span class="badge badge-primary"><%= attribute %></span>
-        </a>
-        <% end %>
-        -->
 
         <a href="javascript:;" class="list-group-item">
           Bedrooms

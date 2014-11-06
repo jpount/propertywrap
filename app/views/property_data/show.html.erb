@@ -10,169 +10,96 @@
     </div> <!-- /.well -->
     <% end %>
 
+  </div> <!-- /.layout-sidebar -->
+
+
+
+  <div class="col-sm-8 col-sm-pull-4 layout-main">
+
+    <div class="well text-center">
+      <img src="https://maps.googleapis.com/maps/api/streetview?size=300x200&location=<%= @response['property']['coordinate']['latitude'] %>,<%= @response['property']['coordinate']['longitude'] %>&heading=90&fov=180"/>
+
+    </div> <!-- /.well -->
+
+    <div class="well text-center">
+      <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= @response['property']['coordinate']['latitude'] %>,<%= @response['property']['coordinate']['longitude'] %>&zoom=17&size=300x200&markers=color:black%7Clabel:S%7C-33.86623652,151.20202839">
+    </div>
+
+    <script>
+
+        var map;
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(45.518970, -122.672899),
+                zoom: 18,
+                mapTypeId: google.maps.MapTypeId.SATELLITE,
+                heading: 90,
+                tilt: 45
+            };
+            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        }
+
+        function rotate90() {
+            var heading = map.getHeading() || 0;
+            map.setHeading(heading + 90);
+        }
+
+        function autoRotate() {
+            // Determine if we're showing aerial imagery
+            if (map.getTilt() != 0) {
+                window.setInterval(rotate90, 3000);
+            }
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
     <br>
 
     <div class="portlet">
 
       <h4>Property</h4>
 
-
       <div class="list-group">
 
+        <a href="javascript:;" class="list-group-item">
+          Bedrooms
+          <span class="badge badge-primary"><%= @response['property']['attributes']['bedrooms'] %></span>
+        </a>
+        <a href="javascript:;" class="list-group-item">
+          Bathrooms
+          <span class="badge badge-primary"><%= @response['property']['attributes']['bathrooms'] %></span>
+        </a>
+        <a href="javascript:;" class="list-group-item">
+          Car spaces
+          <span class="badge badge-primary"><%= @response['property']['attributes']['carSpaces'] %></span>
+        </a>
+        <a href="javascript:;" class="list-group-item">
+          Land size
+          <span class="badge badge-primary"><%= @response['property']['attributes']['landArea'] %> sqm</span>
+        </a>
+        <a href="javascript:;" class="list-group-item">
+          Property Type
+          <span class="badge badge-primary"><%= @response['property']['propertyType'] %></span>
+        </a>
 
       </div> <!-- /.list-group -->
 
+
+      <h4>Rental listings</h4>
+
+
+      <div class="list-group">
+        <% @response['property']['forRentPropertyCampaignList'].each do |rental| %>
+
+            <a href="javascript:;" class="list-group-item">
+              <%= rental['agent']['agent'] %>
+              <span class="badge badge-primary"><%= rental['priceDescription'] %></span>
+            </a>
+        <% end %>
+      </div> <!-- /.list-group -->
     </div> <!-- /.portlet -->
-
-  </div> <!-- /.layout-sidebar -->
-
-
-
-  <div id="faq-questions" class="col-sm-8 col-sm-pull-4 layout-main">
-
-    <h2 class="">Frequently Asked Questions</h2>
-
-    <br><br>
-
-    <h4 class="content-title"><u>General Questions</u></h4>
-
-    <div id="accordion-help" class="panel-group accordion-simple">
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-help" href="#faq-general-1"><i class="fa faq-accordion-caret"></i>Mauris cursus massa quis lorem lacinia, eget dictum sapien pellentesque? </a>
-          </h4>
-        </div><!-- .panel-heading -->
-
-        <div id="faq-general-1" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>Nam vulputate diam risus, quis auctor augue varius et. Donec laoreet erat fringilla lorem tempus fringilla. Quisque posuere risus enim, eget aliquam metus auctor congue. Ut condimentum odio sed odio congue ornare. Fusce et elit volutpat dolor porttitor vulputate. Sed vitae sollicitudin metus. Nunc ut sem in magna pellentesque commodo. Sed tristique metus condimentum quam molestie tristique.</p>
-          </div><!-- .panel-body -->
-        </div> <!-- ./panel-collapse -->
-      </div><!-- .panel -->
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-help" href="#faq-general-2"><i class="fa faq-accordion-caret"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit? </a>
-          </h4>
-        </div><!-- .panel-heading -->
-
-        <div id="faq-general-2" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>Nam vulputate diam risus, quis auctor augue varius et. Donec laoreet erat fringilla lorem tempus fringilla. Quisque posuere risus enim, eget aliquam metus auctor congue. Ut condimentum odio sed odio congue ornare. Fusce et elit volutpat dolor porttitor vulputate. Sed vitae sollicitudin metus. Nunc ut sem in magna pellentesque commodo. Sed tristique metus condimentum quam molestie tristique.</p>
-          </div><!-- .panel-body -->
-        </div> <!-- ./panel-collapse -->
-      </div><!-- .panel -->
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-help" href="#faq-general-3"><i class="fa faq-accordion-caret"></i>Sed vel dui rutrum, dignissim tortor? </a>
-          </h4>
-        </div><!-- .panel-heading -->
-
-        <div id="faq-general-3" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>Nam vulputate diam risus, quis auctor augue varius et. Donec laoreet erat fringilla lorem tempus fringilla. Quisque posuere risus enim, eget aliquam metus auctor congue. Ut condimentum odio sed odio congue ornare. Fusce et elit volutpat dolor porttitor vulputate. Sed vitae sollicitudin metus. Nunc ut sem in magna pellentesque commodo. Sed tristique metus condimentum quam molestie tristique.</p>
-          </div><!-- .panel-body -->
-        </div> <!-- ./panel-collapse -->
-      </div><!-- .panel -->
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-help" href="#faq-general-4"><i class="fa faq-accordion-caret"></i>Pellentesque quis lacus vestibulum, pulvinar massa sit amet, vulputate mauris? </a>
-          </h4>
-        </div><!-- .panel-heading -->
-
-        <div id="faq-general-4" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>Nam vulputate diam risus, quis auctor augue varius et. Donec laoreet erat fringilla lorem tempus fringilla. Quisque posuere risus enim, eget aliquam metus auctor congue. Ut condimentum odio sed odio congue ornare. Fusce et elit volutpat dolor porttitor vulputate. Sed vitae sollicitudin metus. Nunc ut sem in magna pellentesque commodo. Sed tristique metus condimentum quam molestie tristique.</p>
-          </div><!-- .panel-body -->
-        </div> <!-- ./panel-collapse -->
-      </div><!-- .panel -->
-
-    </div> <!-- /.accordion -->
-
-    <br><br>
-
-    <h4 class="content-title"><u>Pre-Sale Questions</u></h4>
-
-    <div id="accordion-customization" class="panel-group accordion-simple">
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-customization" href="#faq-presale-1"><i class="fa faq-accordion-caret"></i>Etiam sit amet metus nec magna aliquam venenatis? </a>
-          </h4>
-        </div><!-- .panel-heading -->
-
-        <div id="faq-presale-1" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>Nam vulputate diam risus, quis auctor augue varius et. Donec laoreet erat fringilla lorem tempus fringilla. Quisque posuere risus enim, eget aliquam metus auctor congue. Ut condimentum odio sed odio congue ornare. Fusce et elit volutpat dolor porttitor vulputate. Sed vitae sollicitudin metus. Nunc ut sem in magna pellentesque commodo. Sed tristique metus condimentum quam molestie tristique.</p>
-          </div><!-- .panel-body -->
-        </div> <!-- ./panel-collapse -->
-      </div><!-- .panel -->
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-customization" href="#faq-presale-2"><i class="fa faq-accordion-caret"></i>Integer aliquam quam at felis consequat volutpat? </a>
-          </h4>
-        </div><!-- .panel-heading -->
-
-        <div id="faq-presale-2" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>Nam vulputate diam risus, quis auctor augue varius et. Donec laoreet erat fringilla lorem tempus fringilla. Quisque posuere risus enim, eget aliquam metus auctor congue. Ut condimentum odio sed odio congue ornare. Fusce et elit volutpat dolor porttitor vulputate. Sed vitae sollicitudin metus. Nunc ut sem in magna pellentesque commodo. Sed tristique metus condimentum quam molestie tristique.</p>
-          </div><!-- .panel-body -->
-        </div> <!-- ./panel-collapse -->
-      </div><!-- .panel -->
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-customization" href="#faq-presale-3"><i class="fa faq-accordion-caret"></i>In vel lacus eget neque ultricies posuere? </a>
-          </h4>
-        </div><!-- .panel-heading -->
-
-        <div id="faq-presale-3" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>Nam vulputate diam risus, quis auctor augue varius et. Donec laoreet erat fringilla lorem tempus fringilla. Quisque posuere risus enim, eget aliquam metus auctor congue. Ut condimentum odio sed odio congue ornare. Fusce et elit volutpat dolor porttitor vulputate. Sed vitae sollicitudin metus. Nunc ut sem in magna pellentesque commodo. Sed tristique metus condimentum quam molestie tristique.</p>
-          </div><!-- .panel-body -->
-        </div> <!-- ./panel-collapse -->
-      </div><!-- .panel -->
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-customization" href="#faq-presale-4"><i class="fa faq-accordion-caret"></i>Aliquam consequat ante at viverra pellentesque? </a>
-          </h4>
-        </div><!-- .panel-heading -->
-
-        <div id="faq-presale-4" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>Nam vulputate diam risus, quis auctor augue varius et. Donec laoreet erat fringilla lorem tempus fringilla. Quisque posuere risus enim, eget aliquam metus auctor congue. Ut condimentum odio sed odio congue ornare. Fusce et elit volutpat dolor porttitor vulputate. Sed vitae sollicitudin metus. Nunc ut sem in magna pellentesque commodo. Sed tristique metus condimentum quam molestie tristique.</p>
-          </div><!-- .panel-body -->
-        </div> <!-- ./panel-collapse -->
-      </div><!-- .panel -->
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-customization" href="#faq-presale-5"><i class="fa faq-accordion-caret"></i>Morbi rhoncus odio ut ipsum cursus venenatis? </a>
-          </h4>
-        </div><!-- .panel-heading -->
-
-        <div id="faq-presale-5" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>Nam vulputate diam risus, quis auctor augue varius et. Donec laoreet erat fringilla lorem tempus fringilla. Quisque posuere risus enim, eget aliquam metus auctor congue. Ut condimentum odio sed odio congue ornare. Fusce et elit volutpat dolor porttitor vulputate. Sed vitae sollicitudin metus. Nunc ut sem in magna pellentesque commodo. Sed tristique metus condimentum quam molestie tristique.</p>
-          </div><!-- .panel-body -->
-        </div> <!-- ./panel-collapse -->
-      </div><!-- .panel -->
-
-    </div> <!-- /.accordion -->
 
   </div> <!-- /.col -->
 

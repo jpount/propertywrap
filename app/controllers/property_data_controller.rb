@@ -43,7 +43,8 @@ class PropertyDataController < ApplicationController
 
     @json_response = RestClient.get(
         "https://rpgateway-uat.rpdata.com/bsg-au/v1/property/#{@propertyId}.json",
-        :params => {:returnFields => 'propertyPhotoList'},
+#        :params => {:returnFields => 'propertyPhotoList'},
+        :params => {:returnFields => 'propertyPhotoList,address,attributes,coordinate,title,saleList,forRentPropertyCampaignList'},
         :content_type => :json, :accept => :json, :Authorization => 'Bearer ' + @auth_token)
 
     @response = JSON.parse(@json_response)
