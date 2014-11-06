@@ -7,7 +7,5 @@
     "angular-mocks": "latest",
     "bootstrap-sass-official": "latest",
     "angular-flash": "latest"
-  },
-  "resolutions": {
   }
 }
