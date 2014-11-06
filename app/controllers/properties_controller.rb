@@ -70,7 +70,7 @@ class PropertiesController < ApplicationController
       prop.img_url = img_obj['mediumPhotoUrl']
     rescue Exception => e
       logger.warn "Error calling the API: #{e}"
-      prop.img_url = '/assets/image-missing.png'
+      prop.img_url = 'image-missing.png'
     end
   end
 
