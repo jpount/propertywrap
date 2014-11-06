@@ -13,11 +13,6 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require internal/highcharts
 //= require admin/libs/bootstrap.min
-//= require admin/plugins/flot/jquery.flot
-//= require admin/plugins/flot/jquery.flot.tooltip.min
-//= require admin/plugins/flot/jquery.flot.pie
-//= require admin/plugins/flot/jquery.flot.resize
 //= require admin/mvpready-core
 //= require admin/mvpready-admin
