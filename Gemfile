@@ -30,7 +30,7 @@ gem 'cocoon'
 gem 'bootstrap-datepicker-rails'
 gem 'kaminari'
 
-gem 'rest_client'
+gem 'ransack'
 
 gem "font-awesome-rails"
 
