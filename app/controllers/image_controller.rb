@@ -19,10 +19,11 @@ class ImageController < ApplicationController
 
     @response = JSON.parse(@json_response)
 
-    unless @response == nil
+    unless @response['suggestions'].blank?
       puts @response['suggestions'].first['propertyId']
       return @response['suggestions'].first['propertyId']
     end
+    return nil
   end
 
   def index
@@ -30,16 +31,20 @@ class ImageController < ApplicationController
     puts @address
     @propertyId = lookup(@address)
     puts @propertyId
-    @json_response = RestClient.get(
-        "https://rpgateway-uat.rpdata.com/bsg-au/v1/property/#{@propertyId}.json",
-        :params => {:returnFields => 'propertyPhotoList'},
-        :content_type => :json, :accept => :json, :Authorization => 'Bearer ' + @auth_token)
 
-    @response = JSON.parse(@json_response)
+    unless @propertyId.blank?
+      @json_response = RestClient.get(
+          "https://rpgateway-uat.rpdata.com/bsg-au/v1/property/#{@propertyId}.json",
+          :params => {:returnFields => 'propertyPhotoList'},
+          :content_type => :json, :accept => :json, :Authorization => 'Bearer ' + @auth_token)
 
-    unless @response == nil
+      @response = JSON.parse(@json_response)
+    end
+
+    unless @response['property'].blank?
       respond_with(@response['property']['propertyPhotoList'].first['mediumPhotoUrl'])
     end
+    respond_with('Not found')
   end
 
 end
