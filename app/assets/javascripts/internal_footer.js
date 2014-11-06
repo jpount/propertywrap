@@ -21,4 +21,3 @@
 //= require admin/plugins/flot/jquery.flot.resize
 //= require admin/mvpready-core
 //= require admin/mvpready-admin
-//= require internal/jquery.formatCurrency-1.4.0.pack
