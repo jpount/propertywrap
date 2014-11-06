@@ -3,4 +3,5 @@ class Transaction < ActiveRecord::Base
 
   INCOME_TYPE = [ :rent, :other]
   OUTGOING_TYPE = [ :rates, :stats, :utilities, :other]
+  FREQUENCY = [:weekly, :fortnightly, :monthly, :yearly]
 end
