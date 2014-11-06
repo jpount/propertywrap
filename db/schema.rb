@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 20141106081345) do
     t.decimal  "value"
     t.string   "frequency"
     t.date     "last_due"
-    t.integer  "property_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
