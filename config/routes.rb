@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   resources :property_data
-  resources :image
+  resources :images
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   

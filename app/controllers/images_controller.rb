@@ -1,4 +1,4 @@
-class ImageController < ApplicationController
+class ImagesController < ApplicationController
   before_action :set_property
   respond_to :html, :json
 

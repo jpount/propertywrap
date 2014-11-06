@@ -18,8 +18,6 @@ class PropertiesController < ApplicationController
     respond_with(@property)
   end
 
-  def edit
-  end
 
   def create
     @property = Property.new(property_params)
@@ -60,6 +58,6 @@ class PropertiesController < ApplicationController
     end
 
     def property_params
-      params.require(:property).permit(:unit_no, :street_no, :street, :post_code, :city, :country, :lat, :lon, :property_type, :no_of_beds, :no_of_baths, :no_of_carspaces, :purchase_date)
+      params.require(:property).permit(:unit_no, :street_no, :street, :post_code, :city, :country, :lat, :lon, :property_type, :no_of_beds, :no_of_baths, :no_of_carspaces, :purchase_date, :state)
     end
 end
