@@ -35,6 +35,9 @@ gem 'ransack'
 gem 'carrierwave'
 gem 'paperclip', '~> 4.2'
 
+gem 'rest-client'
+gem 'json'
+
 group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'
