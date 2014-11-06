@@ -1,6 +1,7 @@
 <% content_for :title do %>Maps<% end %>
 
 <div class="layout layout-stack-sm layout-main-left">
+<%= @response %>
 
   <div class="col-sm-4 col-sm-push-8 layout-sidebar">
 
@@ -50,7 +51,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div class="portlet">
 
       <h4>Property</h4>
-
 
       <div class="list-group">
         <!--

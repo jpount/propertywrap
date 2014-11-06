@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   #resources :transactions
   resources :property_data
+  resources :image
+
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   

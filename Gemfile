@@ -27,13 +27,8 @@ gem 'rails_admin'
 gem 'devise'
 gem 'rails_config'
 gem 'cocoon'
-gem 'highcharts-rails', '~> 3.0.0'
 gem 'bootstrap-datepicker-rails'
 gem 'kaminari'
-gem 'ransack'
-
-gem 'carrierwave'
-gem 'paperclip', '~> 4.2'
 
 gem 'rest-client'
 gem 'json'

@@ -1,9 +1,79 @@
-<header class="row">
-  <h1 class="text-center col-md-6 col-md-offset-3">Angular Page</h1>
-</header>
-<section>
-    <div class="col-md-3">
-        <a href="/pages/about" class="btn btn-default">&larr; Rails Page</a>
-    </div>
-</section>
+<main>
+    <div class="heading">
 
+        <header>
+            <nav>
+                <ul>
+                    <li ng-repeat="item in nav" ng-class="{'active': item.active}">{{item.label}}</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="col-xs-6">
+                <h2>Welcome<br> Mr Awesome</h2>
+            </div>
+            <div class="col-xs-6">
+                <div class="info-container" ng-repeat="item in info">
+                    <div class="info-heading">
+                        {{item.label}}
+                    </div>
+                    <div class="info-amount">{{item.amount}}</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="property-container" id="property">
+        <div class="add-property" id="showAddProperty"><i class="fa fa-plus-circle">&nbsp;</i></div>
+
+        <div class="container">
+            <h3><span>Properties</span></h3>
+            <div class="line-divider-inline"></div>
+            <div class="chart">
+                <pie-chart data="data" options="options"></pie-chart>
+            </div>
+            <div>
+                <div ng-repeat="item in propertyList" class="property-list-container col-xs-6">
+                    <div style="background-image: url('{{item.image}}')">
+                        <div class="property-list-container-inner">
+                            <div ng-show="item.outstanding" class="outstanding"><span>{{item.outstanding}}</span></div>
+                            <div class="col-xs-9">
+                                <div class="property-address">
+                                    {{item.label}}
+                                </div>
+                                <div class="property-description" ng-repeat="description in item.description">
+                                    {{description}}
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="property-yield">
+                                    {{item.yield}}
+                                </div>
+                                <p class="property-label">yield</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="help-container">
+
+        <div class="container">
+            <h3><span>How can we help</span></h3>
+            <div class="line-divider-inline"></div>
+            <div class="help-items">
+                <div ng-repeat="item in helpItems" class="col-xs-4">
+                    <div class="help-icons"><span><i class="fa fa-{{item.icon}}"></i></span></div>
+                    <h4>{{item.title}}</h4>
+                    <div class="help-description">{{item.description}}</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</main>

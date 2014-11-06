@@ -70,6 +70,6 @@ class TransactionsController < ApplicationController
     end
 
     def transaction_params
-      params.require(:transaction).permit(:income_type, :outgoing, :value, :fequency, :last_due, :property_id)
+      params.require(:transaction).permit(:income_type, :outgoing, :value, :frequency, :last_due, :property_id, :outgoing_type)
     end
 end
