@@ -53,7 +53,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: propertywrapdb_test
+  database: propertydb_test
   pool: 5
   username: vagrant
   password: password0
