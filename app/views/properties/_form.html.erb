@@ -1,13 +1,16 @@
 <%= form_for(@property, html: {class: "form-horizontal"}) do |f| %>
   <% if @property.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
-
-      <ul>
-      <% @property.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@property.errors.count, "error") %> prohibited this post from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @property.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
