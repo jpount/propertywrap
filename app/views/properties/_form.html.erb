@@ -56,7 +56,7 @@
   <div class="form-group">
     <%= f.label :property_type, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.number_field :property_type, class: "form-control" %>
+      <%= f.select( :property_type, Property::PROPERTY_TYPE.map{|i| [i,i]}, {}, {class: "form-control"}) %>
     </div>
   </div>
 
