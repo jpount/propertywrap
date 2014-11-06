@@ -34,6 +34,7 @@ class PropertiesController < ApplicationController
   end
 
   def update
+
     @property.update(property_params)
     get_first_image(@property)
     respond_to do |format|
@@ -66,15 +67,18 @@ class PropertiesController < ApplicationController
           :params => {:returnFields => 'propertyPhotoList'},
           :content_type => :json, :accept => :json, :Authorization => 'Bearer ' + @auth_token)
       @resp = JSON.parse(@json_response)
-      img_obj = @response['property']['propertyPhotoList'].first
-      prop.img_url = img_obj['mediumPhotoUrl']
+      if @resp['property'].blank?
+        prop.img_url = 'image-missing.png'
+      else
+        prop.img_url = @resp['property']['propertyPhotoList'].first['mediumPhotoUrl']
+      end
     rescue Exception => e
       logger.warn "Error calling the API: #{e}"
       prop.img_url = 'image-missing.png'
     end
   end
 
-    def set_property
+  def set_property
       @property = Property.find(params[:id])
     end
 

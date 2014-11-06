@@ -6,7 +6,7 @@ class Property < ActiveRecord::Base
   validates_presence_of :street, :street_no, :city, :country, :post_code, :purchase_date, :state
 
   def get_search_address
-    address = "address: #{street_no} #{street} #{city} #{state} #{post_code}"
+    address = "#{street_no} #{street} #{city} #{state} #{post_code}"
     address
   end
 
