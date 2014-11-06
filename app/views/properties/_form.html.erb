@@ -1,0 +1,69 @@
+<%= form_for(@property) do |f| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% @property.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :unit_no %><br>
+    <%= f.number_field :unit_no %>
+  </div>
+  <div class="field">
+    <%= f.label :street_no %><br>
+    <%= f.number_field :street_no %>
+  </div>
+  <div class="field">
+    <%= f.label :street %><br>
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :post_code %><br>
+    <%= f.text_field :post_code %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :lon %><br>
+    <%= f.text_field :lon %>
+  </div>
+  <div class="field">
+    <%= f.label :property_type %><br>
+    <%= f.text_field :property_type %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_beds %><br>
+    <%= f.number_field :no_of_beds %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_baths %><br>
+    <%= f.number_field :no_of_baths %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_carspaces %><br>
+    <%= f.number_field :no_of_carspaces %>
+  </div>
+  <div class="field">
+    <%= f.label :purcahse_date %><br>
+    <%= f.date_select :purcahse_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

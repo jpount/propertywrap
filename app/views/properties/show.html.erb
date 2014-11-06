@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unit no:</strong>
+  <%= @property.unit_no %>
+</p>
+
+<p>
+  <strong>Street no:</strong>
+  <%= @property.street_no %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @property.street %>
+</p>
+
+<p>
+  <strong>Post code:</strong>
+  <%= @property.post_code %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @property.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @property.country %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @property.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @property.lon %>
+</p>
+
+<p>
+  <strong>Property type:</strong>
+  <%= @property.property_type %>
+</p>
+
+<p>
+  <strong>No of beds:</strong>
+  <%= @property.no_of_beds %>
+</p>
+
+<p>
+  <strong>No of baths:</strong>
+  <%= @property.no_of_baths %>
+</p>
+
+<p>
+  <strong>No of carspaces:</strong>
+  <%= @property.no_of_carspaces %>
+</p>
+
+<p>
+  <strong>Purcahse date:</strong>
+  <%= @property.purcahse_date %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

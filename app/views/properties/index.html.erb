@@ -1,0 +1,49 @@
+<h1>Listing properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Unit no</th>
+      <th>Street no</th>
+      <th>Street</th>
+      <th>Post code</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th>Property type</th>
+      <th>No of beds</th>
+      <th>No of baths</th>
+      <th>No of carspaces</th>
+      <th>Purcahse date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.unit_no %></td>
+        <td><%= property.street_no %></td>
+        <td><%= property.street %></td>
+        <td><%= property.post_code %></td>
+        <td><%= property.city %></td>
+        <td><%= property.country %></td>
+        <td><%= property.lat %></td>
+        <td><%= property.lon %></td>
+        <td><%= property.property_type %></td>
+        <td><%= property.no_of_beds %></td>
+        <td><%= property.no_of_baths %></td>
+        <td><%= property.no_of_carspaces %></td>
+        <td><%= property.purcahse_date %></td>
+        <td><%= link_to 'Show', property %></td>
+        <td><%= link_to 'Edit', edit_property_path(property) %></td>
+        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Property', new_property_path %>
