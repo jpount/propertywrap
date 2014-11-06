@@ -1,4 +1,4 @@
-<%= form_for([@property, @transaction]) do |f| %>
+<%= form_for([@property, @transaction], html: {class: "form-horizontal"}) do |f| %>
   <% if @transaction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
@@ -11,27 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :income_type %><br>
-    <%= f.select( :income_type, Transaction::INCOME_TYPE.map{|i| [i,i]}) %>
+  <div class="form-group">
+    <%= f.label :income_type, class: "col-md-3" %>
+    <div class="col-md-7">
+      <%= f.select( :income_type, Transaction::INCOME_TYPE.map{|i| [i,i]}, {}, {class: "form-control"}) %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :outgoing %><br>
-    <%= f.select( :outgoing, Transaction::OPUTGOING.map{|i| [i,i]}) %>
+
+  <div class="form-group">
+    <%= f.label :income_type, class: "col-md-3" %>
+    <div class="col-md-7">
+      <%= f.select( :income_type, Transaction::OPUTGOING.map{|i| [i,i]}, {}, {class: "form-control"}) %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :value %><br>
-    <%= f.text_field :value %>
+
+  <div class="form-group">
+    <%= f.label :value, class: "col-md-3" %>
+    <div class="col-md-7">
+      <%= f.text_field :value, class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :fequency %><br>
-    <%= f.text_field :fequency %>
+
+  <div class="form-group">
+    <%= f.label :fequency, class: "col-md-3" %>
+    <div class="col-md-7">
+      <%= f.text_field :fequency, class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :last_due %><br>
-    <%= f.date_select :last_due %>
+
+  <div class="form-group">
+    <%= f.label :last_due, class: "col-md-3" %>
+    <div class="col-md-7">
+      <%= f.text_field :last_due, class: "form-control" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+  <div class="form-group">
+    <div class="col-md-7 col-md-push-3">
+      <%= f.submit class: "btn btn-primary" %>
+      <%= link_to 'Back', property_path(@property), class: "btn btn-secondary"  %>
+    </div> <!-- /.col -->
+  </div> <!-- /.form-group -->
 <% end %>
