@@ -2,33 +2,35 @@
 
 <%= render 'form' %>
 
-<h1>Listing transactions</h1>
+<div >
+  <h1>Listing transactions</h1>
 
-<table>
-  <thead>
-  <tr>
-    <th>Income type</th>
-    <th>Outgoing</th>
-    <th>Value</th>
-    <th>Fequency</th>
-    <th>Last due</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
 
-  <tbody>
-  <% @property.transactions.each do |transaction| %>
-    <tr>
-      <td><%= transaction.income_type %></td>
-      <td><%= transaction.outgoing_type %></td>
-      <td><%= transaction.value %></td>
-      <td><%= transaction.frequency %></td>
-      <td><%= transaction.last_due %></td>
-      <td><%= link_to 'Edit',  edit_property_transaction_path(@property, transaction) %></td>
-      <td><%= link_to 'Destroy', property_transaction_path(@property, transaction), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <table class="table table-striped table-bordered dataTable" id="table-1" aria-describedby="table-1_info">
+    <thead>
+    <tr role="row">
+      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Income Type</th>
+      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Outgoing</th>
+      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Value</th>
+      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Fequency</th>
+      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Last due</th>
+      <th colspan="1"></th>
     </tr>
-  <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<%= link_to 'New Transaction', new_property_transaction_path(@property) %>
+    <tbody>
+    <% @property.transactions.each do |transaction| %>
+        <tr>
+          <td colspan="3"><%= transaction.income_type%></td>
+          <td colspan="3"><%= transaction.outgoing_type%></td>
+          <td colspan="3"><%= transaction.value%></td>
+          <td colspan="3"><%= transaction.frequency%></td>
+          <td colspan="3"><%= transaction.last_due%></td>
+          <td colspan="1"><%= link_to 'Edit', edit_property_transaction_path(@property,transaction) %>
+            <%= link_to 'Destroy', property_transaction_path(@property, transaction), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'New Transaction', new_property_transaction_path(@property) %></td>
+</div>
