@@ -22,7 +22,6 @@
 //= require admin/mvpready-core
 //= require admin/mvpready-admin
 //= require internal/jquery.formatCurrency-1.4.0.pack
-//= require internal/users
 
 jQuery(function($) {
   // Show clicked element on an ajx call
