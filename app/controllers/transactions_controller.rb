@@ -26,7 +26,7 @@ class TransactionsController < ApplicationController
     respond_to do |format|
       if @transaction.save
         flash[:notice] = 'Transaction was successfully created.'
-        format.html { redirect_to(@transaction.property) }
+        format.html { redirect_to(edit_property_path(@transaction.property)) }
         format.json { render xml: @transaction }
       else
         format.html { render action: "new" }
@@ -37,7 +37,16 @@ class TransactionsController < ApplicationController
 
   def update
     @transaction.update(transaction_params)
-    respond_with(@transaction)
+    respond_to do |format|
+      if @transaction.save
+        flash[:notice] = 'Transaction was successfully created.'
+        format.html { redirect_to(edit_property_path(@transaction.property)) }
+        format.json { render xml: @transaction }
+      else
+        format.html { render action: "new" }
+        format.json { render xml: @transaction }
+      end
+    end
   end
 
   def destroy
