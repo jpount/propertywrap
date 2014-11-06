@@ -18,8 +18,10 @@ class ImageController < ApplicationController
         :content_type => :json, :accept => :json, :Authorization => 'Bearer ' + @auth_token)
 
     @response = JSON.parse(@json_response)
-    puts @response['suggestions'].first['propertyId']
-    return @response['suggestions'].first['propertyId']
+    unless @response.nil
+      puts @response['suggestions'].first['propertyId']
+      return @response['suggestions'].first['propertyId']
+    end
   end
 
   def index
@@ -34,7 +36,9 @@ class ImageController < ApplicationController
 
     @response = JSON.parse(@json_response)
 
-    respond_with(@response['property']['propertyPhotoList'].first['mediumPhotoUrl'])
+    unless @response.nil
+      respond_with(@response['property']['propertyPhotoList'].first['mediumPhotoUrl'])
+    end
   end
 
 end
