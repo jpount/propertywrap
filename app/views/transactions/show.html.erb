@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Income type:</strong>
+  <%= @transaction.income_type %>
+</p>
+
+<p>
+  <strong>Outgoing:</strong>
+  <%= @transaction.outgoing %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @transaction.value %>
+</p>
+
+<p>
+  <strong>Fequency:</strong>
+  <%= @transaction.fequency %>
+</p>
+
+<p>
+  <strong>Last due:</strong>
+  <%= @transaction.last_due %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

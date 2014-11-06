@@ -1,0 +1,33 @@
+<h1>Listing transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Income type</th>
+      <th>Outgoing</th>
+      <th>Value</th>
+      <th>Fequency</th>
+      <th>Last due</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.income_type %></td>
+        <td><%= transaction.outgoing %></td>
+        <td><%= transaction.value %></td>
+        <td><%= transaction.fequency %></td>
+        <td><%= transaction.last_due %></td>
+        <td><%= link_to 'Show', transaction %></td>
+        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+        <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transaction', new_transaction_path %>
