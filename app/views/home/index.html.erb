@@ -1,92 +1,85 @@
-<div ng-app="propertywrap">
+<main>
+  <div class="heading">
 
-  <main>
-    <div class="heading">
-
-
-      <header>
-        <nav>
-          <ul>
-            <li ng-repeat="item in nav" ng-class="{'active': item.active}">{{item.label}}</li>
-          </ul>
-        </nav>
-      </header>
-      <div class="container">
-        <div class="col-xs-6">
-          <h2>Welcome<br> Mr Awesome</h2>
+    <header>
+      <nav>
+        <ul>
+          <li ng-repeat="item in nav" ng-class="{'active': item.active}">{{item.label}}</li>
+        </ul>
+        <a class="cta" ng-click="test()"><i class="fa fa-youtube-play"></i></a>
+      </nav>
+    </header>
+    <div style="visibility: hidden; height: 0">
+      <video controls="" autoplay="" name="media" id="video1" type="audio/mpeg"><source src="http://api.voicerss.org/?key=b584096ca72b4034b91acdaa0aeb8f11&amp;hl=en-au&amp;f=8khz_8bit_stereo&amp;src=welcome%20mr%20awesome" type="audio/mpeg"></video>
+      <video controls="" autoplay="" name="media" id="video2"><source src="http://api.voicerss.org/?key=b584096ca72b4034b91acdaa0aeb8f11&amp;hl=en-au&amp;f=8khz_8bit_stereo&amp;src=your%20income%20is$40,000" type="audio/mpeg"></video>
+      <video controls="" autoplay="" name="media" id="video3"><source src="http://api.voicerss.org/?key=b584096ca72b4034b91acdaa0aeb8f11&amp;hl=en-au&amp;f=8khz_8bit_stereo&amp;src=your%20outflow%20is$50,000" type="audio/mpeg"></video>
+    </div>
+    <div class="container">
+      <div class="col-xs-6">
+        <h2 class="popup" ng-class="{'active':welcomeHighlight}">Welcome<br> Mr Awesome</h2>
+      </div>
+      <div class="col-xs-6">
+        <div class="info-container" ng-repeat="item in info" ng-class="{'active':item.highlightItem}">
+          <div class="info-heading">
+            {{item.label}}
+          </div>
+          <div class="info-amount">{{item.amount}}</div>
         </div>
-        <div class="col-xs-6">
-          <div class="info-container" ng-repeat="item in info">
-            <div class="info-heading">
-              {{item.label}}
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+
+  <div class="property-container" id="property">
+    <div class="add-property" id="showAddProperty"><i class="fa fa-plus-circle">&nbsp;</i></div>
+
+    <div class="container">
+      <h3><span>Properties</span></h3>
+      <div class="line-divider-inline"></div>
+      <div class="chart">
+        <pie-chart data="data" options="options"></pie-chart>
+      </div>
+      <div>
+        <div ng-repeat="item in propertyList" class="property-list-container col-xs-6">
+          <div style="background-image: url('{{item.image}}')">
+            <div class="property-list-container-inner">
+              <div ng-show="item.outstanding" class="outstanding"><span>{{item.outstanding}}</span></div>
+              <div class="col-xs-9">
+                <div class="property-address">
+                  {{item.label}}
+                </div>
+                <div class="property-description" ng-repeat="description in item.description">
+                  {{description}}
+                </div>
+              </div>
+              <div class="col-xs-3">
+                <div class="property-yield">
+                  {{item.yield}}
+                </div>
+                <p class="property-label">yield</p>
+              </div>
+              <div class="clear"></div>
             </div>
-            <div class="info-amount">{{item.amount}}</div>
           </div>
         </div>
         <div class="clear"></div>
       </div>
     </div>
+  </div>
 
-    <div class="property-container" id="property">
-      <div class="add-property" id="showAddProperty">
-        <%= link_to new_property_path do %>
-          <i class="fa fa-plus-circle"></i>
-        <% end %>
-      </div>
+  <div class="help-container">
 
-      <div class="container">
-        <h3><span>Properties</span></h3>
-        <div class="line-divider-inline"></div>
-        <div class="chart">
-          <pie-chart data="data" options="options"></pie-chart>
+    <div class="container">
+      <h3><span>How can we help</span></h3>
+      <div class="line-divider-inline"></div>
+      <div class="help-items">
+        <div ng-repeat="item in helpItems" class="col-xs-4">
+          <div class="help-icons"><span><i class="fa fa-{{item.icon}}"></i></span></div>
+          <h4>{{item.title}}</h4>
+          <div class="help-description">{{item.description}}</div>
         </div>
-        <div>
-          <% @properties.each do |prop| %>
-          <div class="property-list-container col-xs-6">
-            <div style="background-image: url('http://staticstage.rpdata.com/rpdaAU/photo/listsale/470x313/13/10/28/23156330/23156330_1.JPG')">
-              <div class="property-list-container-inner">
-                <div class="outstanding"><span><%= rand(5..30) %></span></div>
-                <div class="col-xs-9">
-                  <div class="property-address">
-                    <%= link_to "#{prop.street_no} #{prop.street} #{prop.city} #{prop.post_code}", edit_property_path(prop) %>
-
-                  </div>
-                  <div class="property-description" ng-repeat="description in item.description">
-                    desc
-                  </div>
-                </div>
-                <div class="col-xs-3">
-                  <div class="property-yield">
-                    <%= rand(1..8) %>%
-                  </div>
-                  <p class="property-label">yield</p>
-                </div>
-                <div class="clear"></div>
-              </div>
-            </div>
-          </div>
-          <% end %>
-          <div class="clear"></div>
-        </div>
+        <div class="clear"></div>
       </div>
     </div>
-
-    <div class="help-container">
-
-      <div class="container">
-        <h3><span>How can we help</span></h3>
-        <div class="line-divider-inline"></div>
-        <div class="help-items">
-          <div ng-repeat="item in helpItems" class="col-xs-4">
-            <div class="help-icons"><span><i class="fa fa-{{item.icon}}"></i></span></div>
-            <h4>{{item.title}}</h4>
-            <div class="help-description">{{item.description}}</div>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-
-</div>
+  </div>
+</main>

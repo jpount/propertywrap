@@ -4,6 +4,7 @@
     "angular": "latest",
     "angular-route": "latest",
     "angular-resource": "latest",
+    "angular-scroll": "latest",
     "bootstrap-sass-official": "latest",
     "d3": "latest"
   }
