@@ -3,4 +3,5 @@ class Property < ActiveRecord::Base
   PROPERTY_TYPE = [:house, :unit, :apartment]
 
 
+  validates_presence_of :street, :street_no, :city, :country, :post_code, :purchase_date
 end
