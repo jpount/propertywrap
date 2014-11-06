@@ -3,34 +3,77 @@
 <%= render 'form' %>
 
 <div >
-  <h1>Listing transactions</h1>
+  <h4 class="content-title"><u>Income/Expenses</u></h4>
 
+  <ul id="myTab1" class="nav nav-tabs">
+    <li class="active">
+      <a href="#income" data-toggle="tab">Income</a>
+    </li>
 
-  <table class="table table-striped table-bordered dataTable" id="table-1" aria-describedby="table-1_info">
-    <thead>
-    <tr role="row">
-      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Income Type</th>
-      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Outgoing</th>
-      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Value</th>
-      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Fequency</th>
-      <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Last due</th>
-      <th colspan="1"></th>
-    </tr>
-    </thead>
+    <li class="">
+      <a href="#expenses" data-toggle="tab">Expenses</a>
+    </li>
+  </ul>
 
-    <tbody>
-    <% @property.transactions.each do |transaction| %>
-        <tr>
-          <td colspan="3"><%= transaction.income_type%></td>
-          <td colspan="3"><%= transaction.outgoing_type%></td>
-          <td colspan="3"><%= transaction.value%></td>
-          <td colspan="3"><%= transaction.frequency%></td>
-          <td colspan="3"><%= transaction.last_due%></td>
-          <td colspan="1"><%= link_to 'Edit', edit_property_transaction_path(@property,transaction) %>
-            <%= link_to 'Destroy', property_transaction_path(@property, transaction), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <div id="myTab1Content" class="tab-content">
+    <div class="tab-pane fade active in" id="income">
+      <table class="table table-striped table-bordered dataTable" id="table-1" aria-describedby="table-1_info">
+        <thead>
+        <tr role="row">
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Income Type</th>
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Outgoing</th>
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Value</th>
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Fequency</th>
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Last due</th>
+          <th colspan="1"></th>
         </tr>
-    <% end %>
-    </tbody>
-  </table>
+        </thead>
+
+        <tbody>
+        <% @property.transactions.income.each do |transaction| %>
+          <tr>
+            <td colspan="3"><%= transaction.income_type%></td>
+            <td colspan="3"><%= transaction.outgoing_type%></td>
+            <td colspan="3"><%= transaction.value%></td>
+            <td colspan="3"><%= transaction.frequency%></td>
+            <td colspan="3"><%= transaction.last_due%></td>
+            <td colspan="1"><%= link_to 'Edit', edit_property_transaction_path(@property,transaction) %>
+              <%= link_to 'Destroy', property_transaction_path(@property, transaction), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div> <!-- /.tab-pane -->
+
+    <div class="tab-pane fade" id="expenses">
+      <table class="table table-striped table-bordered dataTable" id="table-1" aria-describedby="table-1_info">
+        <thead>
+        <tr role="row">
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Income Type</th>
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Outgoing</th>
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Value</th>
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Fequency</th>
+          <th style="width: 324px;" role="columnheader" aria-controls="table-1" rowspan="1" colspan="3" >Last due</th>
+          <th colspan="1"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @property.transactions.expense.each do |transaction| %>
+          <tr>
+            <td colspan="3"><%= transaction.income_type%></td>
+            <td colspan="3"><%= transaction.outgoing_type%></td>
+            <td colspan="3"><%= transaction.value%></td>
+            <td colspan="3"><%= transaction.frequency%></td>
+            <td colspan="3"><%= transaction.last_due%></td>
+            <td colspan="1"><%= link_to 'Edit', edit_property_transaction_path(@property,transaction) %>
+              <%= link_to 'Destroy', property_transaction_path(@property, transaction), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div> <!-- /.tab-pane -->
+  </div>
+
   <%= link_to 'New Transaction', new_property_transaction_path(@property) %></td>
 </div>

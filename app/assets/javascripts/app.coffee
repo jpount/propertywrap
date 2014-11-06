@@ -1,4 +1,4 @@
-propertywrap = angular.module('propertywrap',[
+Property = angular.module('Property',[
   'templates',
   'ngRoute',
   'ngResource',
@@ -7,7 +7,7 @@ propertywrap = angular.module('propertywrap',[
   'angular-flash.flash-alert-directive'
 ])
 
-propertywrap.config([ '$routeProvider', 'flashProvider',
+Property.config([ '$routeProvider', 'flashProvider',
   ($routeProvider,flashProvider)->
 
     flashProvider.errorClassnames.push("alert-danger")
