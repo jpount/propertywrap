@@ -1,6 +1,6 @@
 class PropertyDetailsController < ApplicationController
   before_action :set_property
-  before_action :set_detail_property, only: [:show, :image, :index]
+  before_action :set_detail_property, only: [:show, :image, :index, :by_state]
 
   respond_to :html, :json
 
@@ -72,6 +72,13 @@ class PropertyDetailsController < ApplicationController
     end
     render :json => @response, :layout => false
   end
+
+  def by_state
+    @q = Property.find(:all)
+    @properties = @q.result
+    render :json => @properties, :layout => false
+  end
+
 
   private
 
