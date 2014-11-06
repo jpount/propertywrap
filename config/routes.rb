@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :properties
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   root 'home#index'
