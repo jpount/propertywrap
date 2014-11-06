@@ -4,7 +4,8 @@
       <header>
         <nav>
           <ul>
-            <li ng-repeat="item in nav" ng-class="{'active': item.active}">{{item.label}}</li>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Manage", properties_path %></li>
           </ul>
         <a class="cta" ng-click="test()"><i class="fa fa-youtube-play"></i></a>
         </nav>
