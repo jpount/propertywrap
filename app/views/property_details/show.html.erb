@@ -94,6 +94,20 @@
           </div> <!-- /.list-group -->
 
 
+          <h4>Recent sales</h4>
+
+          <div class="list-group">
+            <% if @response['property']['saleList'].present? %>
+                <% @response['property']['saleList'].each do |sale| %>
+
+                    <a href="javascript:;" class="list-group-item">
+                      <%= (sale['agency'].blank?)?'Not disclosed':sale['agency']['company']['companyName'] %>
+                      <span class="badge badge-primary">$<%= sale['price'] %></span>
+                    </a>
+                <% end %>
+            <% end %>
+          </div> <!-- /.list-group -->
+
           <h4>Rental listings</h4>
 
 
@@ -103,7 +117,9 @@
 
                   <a href="javascript:;" class="list-group-item">
                     <%= rental['agent']['agent'] %>
-                    <span class="badge badge-primary"><%= rental['priceDescription'] %></span>
+                    <span class="badge badge-primary"><%= (rental['price'] > 0)?'$':''%><%= (rental['price'] > 0)?rental['price']:rental['priceDescription'] %>
+
+                    </span>
                   </a>
               <% end %>
             <% end %>
