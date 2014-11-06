@@ -13,7 +13,7 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require highcharts
+//= require internal/highcharts
 //= require admin/libs/bootstrap.min
 //= require admin/plugins/flot/jquery.flot
 //= require admin/plugins/flot/jquery.flot.tooltip.min
@@ -21,8 +21,8 @@
 //= require admin/plugins/flot/jquery.flot.resize
 //= require admin/mvpready-core
 //= require admin/mvpready-admin
-//= require jquery.formatCurrency-1.4.0.pack
-//= require users
+//= require internal/jquery.formatCurrency-1.4.0.pack
+//= require internal/users
 
 jQuery(function($) {
   // Show clicked element on an ajx call
