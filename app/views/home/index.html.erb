@@ -1,22 +1,25 @@
-<div ng-app="propertywrap">
-
   <main>
     <div class="heading">
-
 
       <header>
         <nav>
           <ul>
             <li ng-repeat="item in nav" ng-class="{'active': item.active}">{{item.label}}</li>
           </ul>
+        <a class="cta" ng-click="test()"><i class="fa fa-youtube-play"></i></a>
         </nav>
       </header>
+    <div style="visibility: hidden; height: 0">
+      <video controls="" autoplay="" name="media" id="video1" type="audio/mpeg"><source src="http://api.voicerss.org/?key=b584096ca72b4034b91acdaa0aeb8f11&amp;hl=en-au&amp;f=8khz_8bit_stereo&amp;src=welcome%20mr%20awesome" type="audio/mpeg"></video>
+      <video controls="" autoplay="" name="media" id="video2"><source src="http://api.voicerss.org/?key=b584096ca72b4034b91acdaa0aeb8f11&amp;hl=en-au&amp;f=8khz_8bit_stereo&amp;src=your%20income%20is$40,000" type="audio/mpeg"></video>
+      <video controls="" autoplay="" name="media" id="video3"><source src="http://api.voicerss.org/?key=b584096ca72b4034b91acdaa0aeb8f11&amp;hl=en-au&amp;f=8khz_8bit_stereo&amp;src=your%20outflow%20is$50,000" type="audio/mpeg"></video>
+    </div>
       <div class="container">
         <div class="col-xs-6">
-          <h2>Welcome<br> Mr Awesome</h2>
+        <h2 class="popup" ng-class="{'active':welcomeHighlight}">Welcome<br> Mr Awesome</h2>
         </div>
         <div class="col-xs-6">
-          <div class="info-container" ng-repeat="item in info">
+        <div class="info-container" ng-repeat="item in info" ng-class="{'active':item.highlightItem}">
             <div class="info-heading">
               {{item.label}}
             </div>
@@ -87,6 +90,3 @@
       </div>
     </div>
   </main>
-
-
-</div>
