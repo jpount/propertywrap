@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :income_type %><br>
-    <%= f.text_field :income_type %>
+    <%= f.select( :income_type, Transaction::INCOME_TYPE.map{|i| [i,i]}) %>
   </div>
   <div class="field">
     <%= f.label :outgoing %><br>
-    <%= f.text_field :outgoing %>
+    <%= f.select( :outgoing, Transaction::OPUTGOING.map{|i| [i,i]}) %>
   </div>
   <div class="field">
     <%= f.label :value %><br>
