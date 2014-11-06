@@ -55,6 +55,10 @@ group :test do
   gem 'webmock'
 end
 
+group :production do
+  gem 'puma'
+end
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
