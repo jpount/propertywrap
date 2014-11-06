@@ -16,7 +16,6 @@
 //= require bootstrap-sprockets
 //= require landing/plugins/timeago/jquery.timeago
 //= require landing/plugins/tweetable/tweetable.jquery.min
-
 //= require landing/plugins/carouFredSel/jquery.carouFredSel-6.2.1-packed
 
 //= require landing/mvpready-core
