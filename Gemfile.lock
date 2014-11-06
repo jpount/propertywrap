@@ -68,16 +68,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (0.10.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
-      mime-types (>= 1.16)
-    climate_control (0.0.3)
-      activesupport (>= 3.0)
     cliver (0.3.2)
-    cocaine (0.5.4)
-      climate_control (>= 0.0.3, < 1.0)
     cocoon (1.2.6)
     code_analyzer (0.4.5)
       sexp_processor
@@ -125,8 +116,6 @@ GEM
     haml (4.0.5)
       tilt
     high_voltage (2.2.1)
-    highcharts-rails (3.0.10)
-      railties (>= 3.1)
     highline (1.6.21)
     hike (1.2.3)
     httpclient (2.5.3.2)
@@ -156,19 +145,12 @@ GEM
     nokogiri (1.6.4)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
-    paperclip (4.2.0)
-      activemodel (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (~> 0.5.3)
-      mime-types
     pg (0.17.1)
     poltergeist (1.5.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
-    polyamorous (1.1.0)
-      activerecord (>= 3.0)
     polyglot (0.3.5)
     puma (2.9.2)
       rack (>= 1.1, < 2.0)
@@ -222,12 +204,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
-    ransack (1.5.1)
-      actionpack (>= 3.0)
-      activerecord (>= 3.0)
-      activesupport (>= 3.0)
-      i18n
-      polyamorous (~> 1.1)
     rdoc (4.1.2)
       json (~> 1.4)
     ref (1.0.5)
@@ -327,7 +303,6 @@ DEPENDENCIES
   brakeman (>= 2.6.0)
   bullet
   capybara
-  carrierwave
   cocoon
   coffee-rails (~> 4.0.0)
   database_cleaner
@@ -337,14 +312,12 @@ DEPENDENCIES
   flog
   foreman
   high_voltage
-  highcharts-rails (~> 3.0.0)
   httpclient
   jbuilder (~> 1.2)
   jquery-rails
   kaminari
   newrelic_rpm
   nokogiri
-  paperclip (~> 4.2)
   pg
   poltergeist
   puma
@@ -353,7 +326,6 @@ DEPENDENCIES
   rails_admin
   rails_best_practices
   rails_config
-  ransack
   rollbar (~> 1.1.0)
   rspec-rails
   sass (= 3.2.19)
