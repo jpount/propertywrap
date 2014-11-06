@@ -1,6 +1,7 @@
 asset 'angular'
 asset 'angular-route'
 asset 'angular-resource'
+asset 'angular-scroll'
 asset 'bootstrap-sass-official'
 asset 'd3'
 # vim: ft=ruby
