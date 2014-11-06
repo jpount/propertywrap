@@ -14,77 +14,77 @@
   <div class="form-group">
     <%= f.label :unit_no, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.number_field :unit_no, class: "form-control" %>
+      <%= f.number_field :unit_no, class: "form-control,col-md-3" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :street_no, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.number_field :street_no, class: "form-control" %>
+      <%= f.number_field :street_no, class: "form-control,col-md-3" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :street, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.text_field :street, class: "form-control" %>
+      <%= f.text_field :street, class: "form-control,col-md-3" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :post_code, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.number_field :post_code, class: "form-control" %>
+      <%= f.number_field :post_code, class: "form-control,col-md-3" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :city, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.text_field :city, class: "form-control" %>
+      <%= f.text_field :city, class: "form-control,col-md-3" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :country, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.text_field :country, class: "form-control" %>
+      <%= f.text_field :country, class: "form-control,col-md-3" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :property_type, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.select( :property_type, Property::PROPERTY_TYPE.map{|i| [i,i]}, {}, {class: "form-control"}) %>
+      <%= f.select( :property_type, Property::PROPERTY_TYPE.map{|i| [i,i]}, {}, {class: "form-control,col-md-3"}) %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :no_of_beds, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.number_field :no_of_beds, class: "form-control" %>
+      <%= f.number_field :no_of_beds, class: "form-control,col-md-3" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :no_of_baths, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.number_field :no_of_baths, class: "form-control" %>
+      <%= f.number_field :no_of_baths, class: "form-control,col-md-3" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :no_of_carspaces, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.number_field :no_of_carspaces, class: "form-control" %>
+      <%= f.number_field :no_of_carspaces, class: "form-control,col-md-3" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :purchase_date, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.date_field :purchase_date, class: "form-control" %>
+      <%= f.date_field :purchase_date, class: "form-control,col-md-3" %>
     </div>
   </div>
 
