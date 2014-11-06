@@ -43,12 +43,13 @@
         <div>
           <% @properties.each do |prop| %>
           <div class="property-list-container col-xs-6">
-            <div style="background-image: url('{{item.image}}')">
+            <div style="background-image: url('http://staticstage.rpdata.com/rpdaAU/photo/listsale/470x313/13/10/28/23156330/23156330_1.JPG')">
               <div class="property-list-container-inner">
                 <div class="outstanding"><span><%= rand(5..30) %></span></div>
                 <div class="col-xs-9">
                   <div class="property-address">
-                    <%= "#{prop.street_no} #{prop.street} #{prop.city} #{prop.post_code}" %>
+                    <%= link_to "#{prop.street_no} #{prop.street} #{prop.city} #{prop.post_code}", edit_property_path(prop) %>
+
                   </div>
                   <div class="property-description" ng-repeat="description in item.description">
                     desc
