@@ -1,38 +1,49 @@
 <% content_for :title do %>About<% end %>
 
-<div class="row">
+<div class="layout layout-main-right layout-stack-sm">
 
-  <div class="col-md-8">
+  <div class="col-md-3 col-sm-4 layout-sidebar">
 
-    <h2 class="">Your Notifications</h2>
+    <div class="nav-layout-sidebar-skip">
+      <strong>Tab Navigation</strong> / <a href="#settings-content">Skip to Content</a>
+    </div>
 
-    <br><br>
-
-    <h4 class="content-title"><u>Sent Today</u></h4>
-
-    <ul class="icons-list notifications-list">
-      <li>
-        <i class="icon-li fa fa-ban text-danger"></i>
-        <a href="javascript:;">Nikita Williams</a> rejected an <a href="javascript:;">Action Step</a> from you
+    <ul id="myTab" class="nav nav-layout-sidebar nav-stacked">
+      <li class="active">
+        <a href="#privacy-tab" data-toggle="tab">
+          <i class="fa fa-lock"></i>
+          &nbsp;&nbsp;About This App
+        </a>
       </li>
 
       <li>
-        <i class="icon-li fa fa-check-circle text-success"></i>
-        <a href="javascript:;">You</a> accepted an <a href="javascript:;">Action Step</a> from <a href="javascript:;">Scott Marshall</a>
+        <a href="#terms-tab" data-toggle="tab">
+          <i class="fa fa-info"></i>
+          &nbsp;&nbsp;Terms of Use
+        </a>
       </li>
-    </ul>
 
-    <br>
-
-    <h4 class="content-title"><u>Sent Yesterday</u></h4>
-
-    <ul class="icons-list notifications-list">
-      <li>
-        <i class="icon-li fa fa-eye text-secondary"></i>
-        <a href="javascript:;">You</a> watched the project <a href="javascript:;">MVP Ready Development</a>
-      </li>
     </ul>
 
   </div> <!-- /.col -->
 
-</div> <!-- /.row -->
+
+  <div class="col-md-9 col-sm-8 layout-main">
+
+    <div id="settings-content" class="tab-content stacked-content">
+
+      <div class="tab-pane fade in active" id="privacy-tab">
+        <h3 class="content-title"><u>About</u></h3>
+        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+      </div> <!-- /.tab-pane -->
+
+      <div class="tab-pane fade" id="terms-tab">
+        <h3 class="content-title"><u>Terms of use</u></h3>
+        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+      </div> <!-- /.tab-pane -->
+
+    </div> <!-- /.tab-content -->
+
+  </div> <!-- /.col -->
