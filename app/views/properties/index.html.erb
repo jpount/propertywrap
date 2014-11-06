@@ -1,48 +1,45 @@
-<h1>Listing properties</h1>
+<h1>Property List</h1>
 
-<table>
+<%= search_form_for @q, url: properties_path(@q), html: {:class => 'form-inline', :role => "form"} do |f| %>
+    <div class="form-group">
+      <%= f.label :city_cont, {:class => 'sr-only'} %>
+      <%= f.search_field :city_cont, {:class => 'form-control', :placeholder => "Suburb/City Contains"} %>
+    </div>
+    <%= f.submit :class => "btn btn-primary" %>
+<% end %>
+
+<table class="table table-striped">
   <thead>
-    <tr>
-      <th>Unit no</th>
-      <th>Street no</th>
-      <th>Street</th>
-      <th>Post code</th>
-      <th>City</th>
-      <th>Country</th>
-      <th>Lat</th>
-      <th>Lon</th>
-      <th>Property type</th>
-      <th>No of beds</th>
-      <th>No of baths</th>
-      <th>No of carspaces</th>
-      <th>Purchase date</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Unit no</th>
+    <th>Street no</th>
+    <th>Street</th>
+    <th>Post code</th>
+    <th>City</th>
+    <th>Type</th>
+    <th>Beds</th>
+    <th>Baths</th>
+    <th colspan="1"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @properties.each do |property| %>
+  <% @properties.each do |property| %>
       <tr>
         <td><%= property.unit_no %></td>
         <td><%= property.street_no %></td>
         <td><%= property.street %></td>
         <td><%= property.post_code %></td>
         <td><%= property.city %></td>
-        <td><%= property.country %></td>
-        <td><%= property.lat %></td>
-        <td><%= property.lon %></td>
         <td><%= property.property_type %></td>
         <td><%= property.no_of_beds %></td>
         <td><%= property.no_of_baths %></td>
-        <td><%= property.no_of_carspaces %></td>
-        <td><%= property.purchase_date %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_property_path(property), :class => "btn btn-sm btn-secondary" %> <%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-sm btn-primary" %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
+  <%= paginate @properties %>
 </table>
-
 <br>
+<%= link_to 'New Property', new_property_path, :class => "btn btn-secondary" %>
 
-<%= link_to 'New Property', new_property_path %>

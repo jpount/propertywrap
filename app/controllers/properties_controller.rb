@@ -3,8 +3,10 @@ class PropertiesController < ApplicationController
   respond_to :html, :json
 
   def index
-    @properties = Property.all
+    @q = Property.search(params[:q])
+    @properties = @q.result.order(:city).page(params[:page])
     respond_with(@properties)
+
   end
 
   def show
