@@ -7,12 +7,12 @@
     <% if !@response.nil? && !@response['property'].nil? %>
         <% @response['property']['propertyPhotoList'].each do |image| %>
             <div class="well text-center">
-              <img src="<%= image['mediumPhotoUrl'] %>">
+              <img src="<%= image['mediumPhotoUrl'] %>" class="img-responsive">
             </div> <!-- /.well -->
         <% end %>
     <% else %>
         <div class="well text-center">
-          <%= image_tag "image-missing.png" %>
+          <%= image_tag "image-missing.png", class: "img-responsive" %>
         </div> <!-- /.well -->
     <% end %>
 
