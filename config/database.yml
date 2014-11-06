@@ -18,13 +18,11 @@ development:
   adapter: postgresql
   encoding: unicode
   database: propertywrapdb_development
-  host: 127.0.0.1
-  port: 5432
   pool: 5
   username: vagrant
   password: password0
   template: template0
-
+  
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
@@ -49,9 +47,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: propertywrapdb_test
-  host: 127.0.0.1
-  port: 5432
+  database: propertydb_test
   pool: 5
   username: vagrant
   password: password0
@@ -60,8 +56,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: propertywrapdb
+  database: propertydb
   pool: 10
-  username: db_xxx
-  password: xxx
-  host: xxx.xxx.ap-southeast-2.rds.amazonaws.com
+  username: db_admin
+  password: password0!
+  host: propertydb.cr1wndysygyw.ap-southeast-2.rds.amazonaws.com
