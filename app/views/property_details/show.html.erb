@@ -1,0 +1,143 @@
+<% content_for :title do %>Maps<% end %>
+
+<div class="layout layout-stack-sm layout-main-left">
+
+  <div class="col-sm-4 col-sm-push-8 layout-sidebar">
+
+    <% if !@response.nil? && !@response['property'].nil? %>
+        <% @response['property']['propertyPhotoList'].each do |image| %>
+            <div class="well text-center">
+              <img src="<%= image['mediumPhotoUrl'] %>">
+            </div> <!-- /.well -->
+        <% end %>
+    <% else %>
+        <div class="well text-center">
+          <img src="/assets/image-missing.png">
+        </div> <!-- /.well -->
+    <% end %>
+
+  </div> <!-- /.layout-sidebar -->
+
+
+
+  <div class="col-sm-8 col-sm-pull-4 layout-main">
+
+    <% if !@response.nil? && !@response['property'].nil? %>
+        <div class="well text-center">
+          <img src="https://maps.googleapis.com/maps/api/streetview?size=300x200&location=<%= @response['property']['coordinate']['latitude'] %>,<%= @response['property']['coordinate']['longitude'] %>&heading=90&fov=180"/>
+
+        </div> <!-- /.well -->
+
+        <div class="well text-center">
+          <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= @response['property']['coordinate']['latitude'] %>,<%= @response['property']['coordinate']['longitude'] %>&zoom=17&size=300x200&markers=color:black%7Clabel:S%7C-33.86623652,151.20202839">
+        </div>
+
+        <script>
+
+            var map;
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(45.518970, -122.672899),
+                    zoom: 18,
+                    mapTypeId: google.maps.MapTypeId.SATELLITE,
+                    heading: 90,
+                    tilt: 45
+                };
+                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            }
+
+            function rotate90() {
+                var heading = map.getHeading() || 0;
+                map.setHeading(heading + 90);
+            }
+
+            function autoRotate() {
+                // Determine if we're showing aerial imagery
+                if (map.getTilt() != 0) {
+                    window.setInterval(rotate90, 3000);
+                }
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+        </script>
+
+        <br>
+
+        <div class="portlet">
+
+          <h4>Property</h4>
+
+          <div class="list-group">
+
+            <a href="javascript:;" class="list-group-item">
+              Bedrooms
+              <span class="badge badge-primary"><%= @response['property']['attributes']['bedrooms'] %></span>
+            </a>
+            <a href="javascript:;" class="list-group-item">
+              Bathrooms
+              <span class="badge badge-primary"><%= @response['property']['attributes']['bathrooms'] %></span>
+            </a>
+            <a href="javascript:;" class="list-group-item">
+              Car spaces
+              <span class="badge badge-primary"><%= @response['property']['attributes']['carSpaces'] %></span>
+            </a>
+            <a href="javascript:;" class="list-group-item">
+              Land size
+              <span class="badge badge-primary"><%= @response['property']['attributes']['landArea'] %> sqm</span>
+            </a>
+            <a href="javascript:;" class="list-group-item">
+              Property Type
+              <span class="badge badge-primary"><%= @response['property']['propertyType'] %></span>
+            </a>
+
+          </div> <!-- /.list-group -->
+
+
+          <h4>Rental listings</h4>
+
+
+          <div class="list-group">
+            <% @response['property']['forRentPropertyCampaignList'].each do |rental| %>
+
+                <a href="javascript:;" class="list-group-item">
+                  <%= rental['agent']['agent'] %>
+                  <span class="badge badge-primary"><%= rental['priceDescription'] %></span>
+                </a>
+            <% end %>
+          </div> <!-- /.list-group -->
+        </div> <!-- /.portlet -->
+    <% else %>
+
+        <div class="error-container">
+          <div class="error-code"> 500 </div>
+          <div class="error-details">
+            <h4>Oh dear, there was a problem collecting data for your property.</h4>
+            <br>
+            <p>
+              <strong>What should I do:</strong>
+            </p>
+            <ul class="icons-list">
+              <li>
+                <i class="icon-li fa fa-check-square-o"></i>
+                Get a cup of tea and try again later
+              </li>
+              <li>
+                <i class="icon-li fa fa-check-square-o"></i>
+                Try a different property
+              </li>
+              <li>
+                <i class="icon-li fa fa-check-square-o"></i>
+                Accept our apologies for this temporary problem
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
+    <% end %>
+
+  </div> <!-- /.col -->
+
+</div> <!-- /.row -->

@@ -18,10 +18,9 @@ class PropertiesController < ApplicationController
     respond_with(@property)
   end
 
-
   def create
     @property = Property.new(property_params)
-
+    get_first_image(@property)
     respond_to do |format|
       if @property.save
         flash[:notice] = 'Property was successfully created.'
@@ -35,8 +34,10 @@ class PropertiesController < ApplicationController
   end
 
   def update
+    @property.update(property_params)
+    get_first_image(@property)
     respond_to do |format|
-      if @property.update(property_params)
+      if @property.save
         flash[:notice] = 'Property was successfully updated.'
         format.html { redirect_to(edit_property_path(@property)) }
         format.json { render xml: @property}
@@ -53,6 +54,26 @@ class PropertiesController < ApplicationController
   end
 
   private
+
+  def get_first_image(prop)
+    begin
+      set_oauth_property
+      @address = prop.get_search_address
+      logger.info "Searching for: #{@address}"
+      @propertyId = lookup(@address)
+      @json_response = RestClient.get(
+          "https://rpgateway-uat.rpdata.com/bsg-au/v1/property/#{@propertyId}.json",
+          :params => {:returnFields => 'propertyPhotoList'},
+          :content_type => :json, :accept => :json, :Authorization => 'Bearer ' + @auth_token)
+      @resp = JSON.parse(@json_response)
+      img_obj = @response['property']['propertyPhotoList'].first
+      prop.img_url = img_obj['mediumPhotoUrl']
+    rescue Exception => e
+      logger.warn "Error calling the API: #{e}"
+      prop.img_url = '/assets/image-missing.png'
+    end
+  end
+
     def set_property
       @property = Property.find(params[:id])
     end

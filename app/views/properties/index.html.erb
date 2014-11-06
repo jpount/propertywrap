@@ -34,7 +34,7 @@
         <td><%= property.property_type %></td>
         <td><%= property.no_of_beds %></td>
         <td><%= property.no_of_baths %></td>
-        <td><%= link_to 'Info', property_data_path(property), :class => "btn btn-sm btn-secondary" %> <%= link_to 'Edit', edit_property_path(property), :class => "btn btn-sm btn-secondary" %> <%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Details', property_detail_path(property), :class => "btn btn-sm btn-secondary" %> <%= link_to 'Edit', edit_property_path(property), :class => "btn btn-sm btn-secondary" %> <%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-sm btn-primary" %></td>
       </tr>
   <% end %>
   </tbody>

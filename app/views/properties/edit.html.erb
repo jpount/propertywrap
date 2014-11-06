@@ -76,19 +76,7 @@
   </div>
 </div>
 <div class="col-md-4">
-  <img id="propImg" src="">
-  <script>
-    $(function() {
-      $.ajax({  url: "<%= images_url({address: "#{@property.street_no} #{@property.street} #{@property.city} #{@property.state} #{@property.post_code}", format: :json} ) %>",
-               cache: false,
-               type: "GET",
-               dataType: "html",
-               success: function (data) {
-                 $("#propImg").attr("src", data);
-               }
-            });
-    });
-  </script>
+  <img id="propImg" src="<%= @property.img_url %>">
 </div>
 
 
