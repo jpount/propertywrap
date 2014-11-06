@@ -21,13 +21,30 @@ class PropertiesController < ApplicationController
 
   def create
     @property = Property.new(property_params)
-    @property.save
-    respond_with(@property)
+
+    respond_to do |format|
+      if @property.save
+        flash[:notice] = 'Property was successfully created.'
+        format.html { redirect_to(edit_property_path(@property)) }
+        format.json { render xml: @property}
+      else
+        format.html { render action: "new" }
+        format.json { render xml: @property }
+      end
+    end
   end
 
   def update
-    @property.update(property_params)
-    respond_with(@property)
+    respond_to do |format|
+      if @property.update(property_params)
+        flash[:notice] = 'Property was successfully updated.'
+        format.html { redirect_to(edit_property_path(@property)) }
+        format.json { render xml: @property}
+      else
+        format.html { render action: "new" }
+        format.json { render xml: @property }
+      end
+    end
   end
 
   def destroy

@@ -19,9 +19,9 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :income_type, class: "col-md-3" %>
+    <%= f.label :outgoing_type, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.select( :income_type, Transaction::OPUTGOING.map{|i| [i,i]}, {}, {class: "form-control"}) %>
+      <%= f.select( :outgoing_type, Transaction::OUTGOING_TYPE.map{|i| [i,i]}, {}, {class: "form-control"}) %>
     </div>
   </div>
 
@@ -33,9 +33,9 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :fequency, class: "col-md-3" %>
+    <%= f.label :frequency, class: "col-md-3" %>
     <div class="col-md-7">
-      <%= f.text_field :fequency, class: "form-control" %>
+      <%= f.text_field :frequency, class: "form-control" %>
     </div>
   </div>
 
@@ -49,7 +49,7 @@
   <div class="form-group">
     <div class="col-md-7 col-md-push-3">
       <%= f.submit class: "btn btn-primary" %>
-      <%= link_to 'Back', property_path(@property), class: "btn btn-secondary"  %>
+      <%= link_to 'Back', edit_property_path(@property), class: "btn btn-secondary"  %>
     </div> <!-- /.col -->
   </div> <!-- /.form-group -->
 <% end %>

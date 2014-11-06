@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141106050132) do
+ActiveRecord::Schema.define(version: 20141106081345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,17 +29,18 @@ ActiveRecord::Schema.define(version: 20141106050132) do
     t.integer  "no_of_beds"
     t.integer  "no_of_baths"
     t.integer  "no_of_carspaces"
-    t.date     "purcahse_date"
+    t.date     "purchase_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "transactions", force: true do |t|
     t.string   "income_type"
-    t.string   "outgoing"
+    t.string   "outgoing_type"
     t.decimal  "value"
-    t.string   "fequency"
+    t.string   "frequency"
     t.date     "last_due"
+    t.integer  "property_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
