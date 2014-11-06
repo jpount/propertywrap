@@ -22,7 +22,7 @@ development:
 #  username: vagrant
 #  password: password0
 #  template: template0
-  database: propertywrapdb
+  database: propertydb
   pool: 10
   username: db_admin
   password: password0!
@@ -62,7 +62,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: propertywrapdb
+  database: propertydb
   pool: 10
   username: db_admin
   password: password0!
