@@ -22,17 +22,3 @@
 //= require admin/mvpready-core
 //= require admin/mvpready-admin
 //= require internal/jquery.formatCurrency-1.4.0.pack
-
-jQuery(function($) {
-  // Show clicked element on an ajx call
-  $(".selectable").bind("ajax:before", function() {
-    $(this).addClass("selected");
-  }).bind("ajax:complete", function() {
-    $(".selected").removeClass("selected");
-  });
-
-  $("div[data-load]").filter(":visible").each(function(){
-    var path = $(this).attr('data-load');
-    $(this).load(path);
-  });
-});

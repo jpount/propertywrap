@@ -4,8 +4,7 @@
     "angular": "latest",
     "angular-route": "latest",
     "angular-resource": "latest",
-    "angular-mocks": "latest",
     "bootstrap-sass-official": "latest",
-    "angular-flash": "latest"
+    "d3": "latest"
   }
 }
