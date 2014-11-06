@@ -8,44 +8,44 @@
         $scope.nav = [{
             label: 'Home', active: true
         },
-        {
-            label: 'Manage', active: false
-        },
-        {
-            label: 'Insights', active: false
-        }]
+            {
+                label: 'Manage', active: false
+            },
+            {
+                label: 'Insights', active: false
+            }]
 
         $scope.info = [
-        {
-            label: 'Income', amount: '$40,000'
-        },
-        {
-            label: 'Outflow', amount: '$40,000'
-        }];
+            {
+                label: 'Income', amount: '$40,000'
+            },
+            {
+                label: 'Outflow', amount: '$40,000'
+            }];
 
         $scope.propertyList = [{
             label: '1 Shelley St, Sydney NSW', yield: '10%', description: ['Last rent paid on 3/2/2014'], outstanding: 0,
             image: 'images/house1.jpeg'
         },
-        {
-            label: '16 Martin Pl, Sydney NSW', yield: '4%', description: ['Last rent paid on 3/2/2014', 'Maintenence required', 'Outstanding rent for April'], outstanding: 2,
-            image: 'images/house2.jpeg'
-        },
-        {
-            label: '23 Foveaux, Perth WA', yield: '13%', description: ['Outstanding rent for April'], outstanding: 1,
-            image: 'images/house3.jpeg'
-        },
-        {
-            label: '50 Sunshine St, Gold Coast ', yield: '13%', description: ['Last rent paid on 3/2/2014'], outstanding: 0,
-            image: 'images/house4.jpeg'
-        }];
+            {
+                label: '16 Martin Pl, Sydney NSW', yield: '4%', description: ['Last rent paid on 3/2/2014', 'Maintenence required', 'Outstanding rent for April'], outstanding: 2,
+                image: 'images/house2.jpeg'
+            },
+            {
+                label: '23 Foveaux, Perth WA', yield: '13%', description: ['Outstanding rent for April'], outstanding: 1,
+                image: 'images/house3.jpeg'
+            },
+            {
+                label: '50 Sunshine St, Gold Coast ', yield: '13%', description: ['Last rent paid on 3/2/2014'], outstanding: 0,
+                image: 'images/house4.jpeg'
+            }];
 
         $scope.options = {thickness: 20};
 
         $scope.data = [
-          {label: "Gold Coast", value: 1, color: "#1f77b4"},
-          {label: "Perth", value: 1, color: "#ff7f0e"},
-          {label: "Sydney", value: 2, color: "#2ca02c"}
+            {label: "Gold Coast", value: 1, color: "#1f77b4"},
+            {label: "Perth", value: 1, color: "#ff7f0e"},
+            {label: "Sydney", value: 2, color: "#2ca02c"}
         ];
 
         $scope.helpItems = [
