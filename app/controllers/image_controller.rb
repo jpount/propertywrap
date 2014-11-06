@@ -18,7 +18,8 @@ class ImageController < ApplicationController
         :content_type => :json, :accept => :json, :Authorization => 'Bearer ' + @auth_token)
 
     @response = JSON.parse(@json_response)
-    unless @response.nil
+
+    unless @response == nil
       puts @response['suggestions'].first['propertyId']
       return @response['suggestions'].first['propertyId']
     end
@@ -36,7 +37,7 @@ class ImageController < ApplicationController
 
     @response = JSON.parse(@json_response)
 
-    unless @response.nil
+    unless @response == nil
       respond_with(@response['property']['propertyPhotoList'].first['mediumPhotoUrl'])
     end
   end
