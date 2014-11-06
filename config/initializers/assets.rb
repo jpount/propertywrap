@@ -10,3 +10,6 @@ Rails.application.config.assets.precompile += %w( landing.css )
 Rails.application.config.assets.precompile += %w( landing_footer.js )
 Rails.application.config.assets.precompile += %w( internal.css )
 Rails.application.config.assets.precompile += %w( internal_footer.js )
+
+Rails.application.config.assets.precompile += %w( nonjs.css )
+Rails.application.config.assets.precompile += %w( nonjs.js )

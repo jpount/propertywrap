@@ -30,6 +30,9 @@ gem 'cocoon'
 gem 'bootstrap-datepicker-rails'
 gem 'kaminari'
 
+
+gem "font-awesome-rails"
+
 group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'

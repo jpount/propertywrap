@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get '/railspage', to: 'pages#index'
 
+  get '/nonjs', to: 'nonjs#index'
+
 end  
