@@ -20,15 +20,15 @@
   <% @property.transactions.each do |transaction| %>
     <tr>
       <td><%= transaction.income_type %></td>
-      <td><%= transaction.outgoing %></td>
+      <td><%= transaction.outgoing_type %></td>
       <td><%= transaction.value %></td>
-      <td><%= transaction.fequency %></td>
+      <td><%= transaction.frequency %></td>
       <td><%= transaction.last_due %></td>
-      <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
-      <td><%= link_to 'Destroy', transaction_path(id: transaction), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Edit',  edit_property_transaction_path(@property, transaction) %></td>
+      <td><%= link_to 'Destroy', property_transaction_path(@property, transaction), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<%= link_to 'New Transaction', new_property_transactions_path(@property) %>
+<%= link_to 'New Transaction', new_property_transaction_path(@property) %>

@@ -18,6 +18,7 @@ class TransactionsController < ApplicationController
   end
 
   def edit
+    @property = Property.find(params[:property_id])
   end
 
   def create
@@ -54,7 +55,7 @@ class TransactionsController < ApplicationController
     respond_to do |format|
       if @transaction.save
         flash[:notice] = 'Transaction was successfully deleted.'
-        format.html { redirect_to(@transaction.property) }
+        format.html { redirect_to(edit_property_path(@transaction.property)) }
         format.json { render xml: @transaction }
       else
         format.html { render action: "new" }
