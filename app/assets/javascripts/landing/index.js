@@ -10,9 +10,6 @@
         },
             {
                 label: 'Manage', active: false
-            },
-            {
-                label: 'Insights', active: false
             }]
 
         $scope.info = [
