@@ -6,6 +6,4 @@
 //= require angular-flash/dist/angular-flash
 //= require angular-rails-templates
 //= require app
-//= require_tree ./templates
-//= require_tree ./controllers
 //= require_tree ./landing
