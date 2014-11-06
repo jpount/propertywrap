@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="204093666">
+    <data-source source="LOCAL" name="Rails propertywrap: development" uuid="40d486a8-926e-4d60-b560-8792f9441287">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:propertywrapdb_development</jdbc-url>
+      <user-name>vagrant</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf9a</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails propertywrap: test" uuid="648055cc-a4b2-4273-abc3-d890bec301b2">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:propertydb_test</jdbc-url>
+      <user-name>vagrant</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf9a</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails propertywrap: production" uuid="6ec488cb-7c08-493c-a7fb-15c99c124355">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://propertydb.cr1wndysygyw.ap-southeast-2.rds.amazonaws.com/propertydb</jdbc-url>
+      <user-name>db_admin</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf9adf8b</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

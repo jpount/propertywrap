@@ -55,9 +55,10 @@ group :test do
   gem 'webmock'
 end
 
-group :production do
-  gem 'puma'
-end
+#group :production do
+#  gem 'puma'
+#end
+gem 'rails_12factor', group: :production
 
 group :development do
   gem 'better_errors'

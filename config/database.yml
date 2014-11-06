@@ -56,8 +56,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: propertydb
+  #database: propertydb
   pool: 10
-  username: db_admin
-  password: password0!
-  host: propertydb.cr1wndysygyw.ap-southeast-2.rds.amazonaws.com
+  #username: db_admin
+  #password: password0!
+  #host: propertydb.cr1wndysygyw.ap-southeast-2.rds.amazonaws.com
