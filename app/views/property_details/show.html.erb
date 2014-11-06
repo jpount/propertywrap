@@ -98,12 +98,14 @@
 
 
           <div class="list-group">
-            <% @response['property']['forRentPropertyCampaignList'].each do |rental| %>
+            <% if @response['property']['forRentPropertyCampaignList'].present? %>
+              <% @response['property']['forRentPropertyCampaignList'].each do |rental| %>
 
-                <a href="javascript:;" class="list-group-item">
-                  <%= rental['agent']['agent'] %>
-                  <span class="badge badge-primary"><%= rental['priceDescription'] %></span>
-                </a>
+                  <a href="javascript:;" class="list-group-item">
+                    <%= rental['agent']['agent'] %>
+                    <span class="badge badge-primary"><%= rental['priceDescription'] %></span>
+                  </a>
+              <% end %>
             <% end %>
           </div> <!-- /.list-group -->
         </div> <!-- /.portlet -->
