@@ -49,9 +49,9 @@
         ];
 
         $scope.helpItems = [
-            {icon: 'dollar', title: 'Macquarie CMA', description: 'Save by automatic transaction matching'},
-            {icon: 'line-chart', title: 'Macquarie Wrap', description: 'Directly manage other investments'},
-            {icon: 'money', title: 'Macquarie Loan', description: 'Get your home loan approved instantly'}
+            {icon: 'dollar', title: 'iBank CMA', description: 'Save by automatic transaction matching'},
+            {icon: 'line-chart', title: 'iBank Wrap', description: 'Directly manage other investments'},
+            {icon: 'money', title: 'iBank Loan', description: 'Get your home loan approved instantly'}
         ];
 
         $document.on('scroll', function($scope){
