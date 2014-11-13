@@ -35,15 +35,6 @@ gem 'ransack'
 
 gem "font-awesome-rails"
 
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'quiet_assets' # Suppress asset pipeline calls in logs
-  gem 'spring'
-  gem 'bullet'
-  gem 'rails_best_practices'
-end
-
 group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'
@@ -59,6 +50,15 @@ group :test, :development do
   # Metrics
   gem 'brakeman', '>= 2.6.0'
   gem 'flog'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets' # Suppress asset pipeline calls in logs
+  gem 'spring'
+  gem 'bullet'
+  gem 'rails_best_practices'
 end
 
 group :production do
