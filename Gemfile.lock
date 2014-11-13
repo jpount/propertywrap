@@ -27,7 +27,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    addressable (2.3.6)
     angular-rails-templates (0.1.3)
       railties (>= 3.1)
       sprockets
@@ -81,8 +80,6 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     colored (1.2)
-    crack (0.4.2)
-      safe_yaml (~> 1.0.0)
     database_cleaner (1.3.0)
     debug_inspector (0.0.2)
     devise (3.4.1)
@@ -297,9 +294,6 @@ GEM
     vcr (2.9.3)
     warden (1.2.3)
       rack (>= 1.0)
-    webmock (1.20.3)
-      addressable (>= 2.3.6)
-      crack (>= 0.3.2)
     websocket-driver (0.3.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -356,4 +350,3 @@ DEPENDENCIES
   timecop
   uglifier (>= 1.3.0)
   vcr
-  webmock

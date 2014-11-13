@@ -45,7 +45,7 @@ group :test, :development do
   gem 'shoulda-matchers'
   gem 'timecop'
   gem 'vcr'
-  gem 'webmock'
+  #gem 'webmock'
 
   # Metrics
   gem 'brakeman', '>= 2.6.0'
