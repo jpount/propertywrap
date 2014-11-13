@@ -7,8 +7,7 @@ class ImagesController < ApplicationController
 
 
   def set_property
-    # Auth Token generated from RP Data OAuth2
-    @auth_token = 'eyJhbGciOiJSUzI1NiJ9.eyJleHAiOiIxNDE1MzQ5MDYwNTI4Iiwic2NvcGUiOiJTVFMgQ1JUIFBUWSBTR1QgVFRMIE1BUCIsInJwLnNydiI6IjI1NTU0MTc2OTM2MDIiLCJpc3MiOiJSUERhdGEub2F1dGgyIiwicnAuY2xpIjoiMGYyZGI4ZGEifQ.UfBJzqdm3FYssNUfHxoQ-c7ZMdAGZodFnVVkfsrHWLgBJWZ0R6iSymH3JWARqjnpExDv9Wxho6QpUUEns4_zN4l_OsWRb68pO6Ted5aqJiBzPfklRa8t4T7fDaHsMTndmCd5KBqrZi2xt61kUK7yBlOVx7bN-dqmOhtwM6l0-TQ'
+    set_oauth_property
   end
 
   def lookup(address)
