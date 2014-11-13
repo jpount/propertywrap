@@ -35,6 +35,15 @@ gem 'ransack'
 
 gem "font-awesome-rails"
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets' # Suppress asset pipeline calls in logs
+  gem 'spring'
+  gem 'bullet'
+  gem 'rails_best_practices'
+end
+
 group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'
@@ -45,28 +54,16 @@ group :test, :development do
   gem 'shoulda-matchers'
   gem 'timecop'
   gem 'vcr'
+  gem 'webmock'
 
   # Metrics
   gem 'brakeman', '>= 2.6.0'
   gem 'flog'
 end
 
-group :test do
-  gem 'webmock'
-end
-
-#group :production do
-#  gem 'puma'
-#end
-gem 'rails_12factor', group: :production
-
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'quiet_assets' # Suppress asset pipeline calls in logs
-  gem 'spring'
-  gem 'bullet'
-  gem 'rails_best_practices'
+group :production do
+  gem 'rails_12factor'
+  gem 'heroku-deflater'
 end
 
 group :doc do
