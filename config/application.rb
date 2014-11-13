@@ -24,5 +24,7 @@ module Propertywrap
 
     config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff)$)
 
+    config.middleware.swap(ActionDispatch::Static, Rack::Zippy::AssetServer)
+
 	end
 end

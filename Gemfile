@@ -63,8 +63,8 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'heroku-deflater'
 end
+gem 'rack-zippy'
 
 group :doc do
   gem 'sdoc', require: false
