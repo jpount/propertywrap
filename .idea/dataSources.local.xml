@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails propertywrap: development" uuid="40d486a8-926e-4d60-b560-8792f9441287">
+      <user-name>vagrant</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf9a</user-password>
+    </data-source>
+    <data-source name="Rails propertywrap: test" uuid="648055cc-a4b2-4273-abc3-d890bec301b2">
+      <user-name>vagrant</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf9a</user-password>
+    </data-source>
+    <data-source name="Rails propertywrap: production" uuid="6ec488cb-7c08-493c-a7fb-15c99c124355">
+      <user-name>db_admin</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf9adf8b</user-password>
+    </data-source>
+  </component>
+</project>

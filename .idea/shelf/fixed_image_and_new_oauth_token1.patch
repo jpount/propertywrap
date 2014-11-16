@@ -1,0 +1,1222 @@
+Index: .idea/runConfigurations/test__propertywrap.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/runConfigurations/test__propertywrap.xml	(revision fd1757fcda2724a33e44c449de93abe44314a9fc)
++++ .idea/runConfigurations/test__propertywrap.xml	(revision )
+@@ -11,11 +11,6 @@
+     </envs>
+     <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+     <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-    <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-      <COVERAGE_PATTERN ENABLED="true">
+-        <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-      </COVERAGE_PATTERN>
+-    </EXTENSION>
+     <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+     <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+     <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+\ No newline at end of file
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.xml	(revision fd1757fcda2724a33e44c449de93abe44314a9fc)
++++ .idea/dataSources.xml	(revision )
+@@ -1,30 +1,23 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="DataSourceManagerImpl" format="xml" hash="204093666">
++  <component name="DataSourceManagerImpl" format="xml">
+     <data-source source="LOCAL" name="Rails propertywrap: development" uuid="40d486a8-926e-4d60-b560-8792f9441287">
+       <driver-ref>postgresql</driver-ref>
+       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+       <jdbc-url>jdbc:postgresql:propertywrapdb_development</jdbc-url>
+-      <user-name>vagrant</user-name>
+-      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf9a</user-password>
+       <libraries />
+     </data-source>
+     <data-source source="LOCAL" name="Rails propertywrap: test" uuid="648055cc-a4b2-4273-abc3-d890bec301b2">
+       <driver-ref>postgresql</driver-ref>
+       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+       <jdbc-url>jdbc:postgresql:propertydb_test</jdbc-url>
+-      <user-name>vagrant</user-name>
+-      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf9a</user-password>
+       <libraries />
+     </data-source>
+     <data-source source="LOCAL" name="Rails propertywrap: production" uuid="6ec488cb-7c08-493c-a7fb-15c99c124355">
+       <driver-ref>postgresql</driver-ref>
+       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+       <jdbc-url>jdbc:postgresql://propertydb.cr1wndysygyw.ap-southeast-2.rds.amazonaws.com/propertydb</jdbc-url>
+-      <user-name>db_admin</user-name>
+-      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf9adf8b</user-password>
+       <libraries />
+     </data-source>
+   </component>
+-</project>
++</project>
+\ No newline at end of file
+-
+\ No newline at end of file
+Index: .idea/propertywrap.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/propertywrap.iml	(revision fd1757fcda2724a33e44c449de93abe44314a9fc)
++++ .idea/propertywrap.iml	(revision )
+@@ -1,8 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <module type="RUBY_MODULE" version="4">
+-  <component name="CompassSettings">
+-    <option name="compassSupportEnabled" value="true" />
+-  </component>
+   <component name="FacetManager">
+     <facet type="RailsFacetType" name="Ruby on Rails">
+       <configuration>
+@@ -13,56 +10,6 @@
+     </facet>
+   </component>
+   <component name="ModuleRunConfigurationManager">
+-    <configuration default="false" name="test: propertywrap" type="RakeRunConfigurationType" factoryName="Rake">
+-      <module name="propertywrap" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+-      <envs>
+-        <env name="RAILS_ENV" value="test" />
+-      </envs>
+-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-        <COVERAGE_PATTERN ENABLED="true">
+-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-        </COVERAGE_PATTERN>
+-      </EXTENSION>
+-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+-      <method />
+-    </configuration>
+-    <configuration default="false" name="spec: propertywrap" type="RakeRunConfigurationType" factoryName="Rake">
+-      <module name="propertywrap" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+-      <envs />
+-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-        <COVERAGE_PATTERN ENABLED="true">
+-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-        </COVERAGE_PATTERN>
+-      </EXTENSION>
+-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+-      <method />
+-    </configuration>
+     <configuration default="false" name="Production: propertywrap" type="RailsRunConfigurationType" factoryName="Rails">
+       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+       <module name="propertywrap" />
+@@ -74,11 +21,6 @@
+       <envs />
+       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-        <COVERAGE_PATTERN ENABLED="true">
+-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-        </COVERAGE_PATTERN>
+-      </EXTENSION>
+       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+@@ -100,21 +42,56 @@
+       <envs />
+       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-        <COVERAGE_PATTERN ENABLED="true">
+-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-        </COVERAGE_PATTERN>
+-      </EXTENSION>
+       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
++      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+       <method />
+     </configuration>
++    <configuration default="false" name="test: propertywrap" type="RakeRunConfigurationType" factoryName="Rake">
++      <module name="propertywrap" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
++      <envs>
++        <env name="RAILS_ENV" value="test" />
++      </envs>
++      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
++      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
++      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
++      <method />
++    </configuration>
++    <configuration default="false" name="spec: propertywrap" type="RakeRunConfigurationType" factoryName="Rake">
++      <module name="propertywrap" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
++      <envs />
++      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
++      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
++      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
++      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
++      <method />
++    </configuration>
+   </component>
+   <component name="NewModuleRootManager">
+     <content url="file://$MODULE_DIR$">
+@@ -122,69 +99,12 @@
+       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+     </content>
+-    <orderEntry type="inheritedJdk" />
++    <orderEntry type="jdk" jdkName="Remote:ruby-2.1.1-p76" jdkType="RUBY_SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.6, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="angular-rails-templates (v0.1.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="arel (v5.0.1.20140414130214, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="awesome_print (v1.2.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.9, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="bower-rails (v0.9.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.5, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="code_analyzer (v0.4.5, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.0.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.3.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.8.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="colored (v1.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.2.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.5, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.11, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="jbuilder (v1.5.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.1.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.4.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.10.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="nested_form (v0.3.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="pg (v0.17.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.5, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="rails_best_practices (v1.15.4, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="rails_serve_static_assets (v0.0.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="rails_stdout_logging (v0.0.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="rake (v10.3.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.1.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="ref (v1.0.5, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="remotipart (v1.2.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="require_all (v1.3.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.19, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v4.0.4, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.11.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.2.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="therubyracer (v0.12.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.4, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.5.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+-    <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
++    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.7.4, Remote:ruby-2.1.1-p76) [gem]" level="application" />
+   </component>
+   <component name="RModuleSettingsStorage">
+     <LOAD_PATH number="0" />
+     <I18N_FOLDERS number="1" string0="$MODULE_DIR$/config/locales" />
+   </component>
+-</module>
++</module>
+\ No newline at end of file
+-
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision fd1757fcda2724a33e44c449de93abe44314a9fc)
++++ .idea/workspace.xml	(revision )
+@@ -1,9 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="258a8685-9baa-48ce-a3e6-db703ff2dbb0" name="Default" comment="">
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
++    <list default="true" id="258a8685-9baa-48ce-a3e6-db703ff2dbb0" name="Default" comment="fixed image and new oauth token">
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Development__propertywrap.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Development__propertywrap.xml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Production__propertywrap.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Production__propertywrap.xml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/propertywrap.iml" afterPath="$PROJECT_DIR$/.idea/propertywrap.iml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/spec__propertywrap.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/spec__propertywrap.xml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/test__propertywrap.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/test__propertywrap.xml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+     </list>
+     <ignored path="propertywrap.iws" />
+     <ignored path=".idea/workspace.xml" />
+@@ -22,6 +27,9 @@
+     <ignored path=".idea/.rakeTasks" />
+     <ignored path=".idea/.generators" />
+     <ignored path=".idea/dataSources.xml" />
++    <ignored path="$PROJECT_DIR$/tmp/" />
++    <ignored path=".idea/dataSources.local.xml" />
++    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+     <option name="TRACKING_ENABLED" value="true" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -41,106 +49,26 @@
+   </component>
+   <component name="FileEditorManager">
+     <leaf>
+-      <file leaf-file-name="20141106050132_create_transactions.rb" pinned="false" current="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/db/migrate/20141106050132_create_transactions.rb">
++      <file leaf-file-name="Vagrantfile" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/Vagrantfile">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="3" />
+-              <folding />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file leaf-file-name="20141113233232_create_config_vars.rb" pinned="false" current="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/db/migrate/20141113233232_create_config_vars.rb">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+-              <caret line="9" column="119" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+-              <folding />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file leaf-file-name="config_var.rb" pinned="false" current="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/app/models/config_var.rb">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+-              <caret line="3" column="21" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="21" />
+-              <folding />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file leaf-file-name="properties_controller.rb" pinned="false" current="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/app/controllers/properties_controller.rb">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="1410">
+-              <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+-              <folding />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file leaf-file-name="property_details_controller.rb" pinned="false" current="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/app/controllers/property_details_controller.rb">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+-              <folding />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file leaf-file-name="transactions_controller.rb" pinned="false" current="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/app/controllers/transactions_controller.rb">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
+-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="26" />
+-              <folding />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file leaf-file-name="nonjs_controller.rb" pinned="false" current="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/app/controllers/nonjs_controller.rb">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
++            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+               <folding />
+             </state>
+           </provider>
+         </entry>
+       </file>
+-      <file leaf-file-name="images_controller.rb" pinned="false" current="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/app/controllers/images_controller.rb">
++      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
++        <entry file="file://$PROJECT_DIR$/Gemfile">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
++            <state vertical-scroll-proportion="-1.0053191" vertical-offset="378" max-vertical-offset="1170">
++              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+               <folding />
+             </state>
+           </provider>
+         </entry>
+       </file>
+-      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="30" />
+-              <folding />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
+-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="0.74492097" vertical-offset="0" max-vertical-offset="600">
+-              <caret line="22" column="300" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+-              <folding />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+     </leaf>
+   </component>
+   <component name="FindManager">
+@@ -155,60 +83,18 @@
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="IdeDocumentHistory">
+-    <option name="changedFiles">
++    <option name="CHANGED_PATHS">
+       <list>
+-        <option value="$PROJECT_DIR$/app/assets/javascripts/internal/landing_footer.js" />
+-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/index.html" />
+-        <option value="$PROJECT_DIR$/app/assets/javascripts/app.coffee" />
+-        <option value="$PROJECT_DIR$/app/assets/stylesheets/landing/index.css" />
+-        <option value="$PROJECT_DIR$/app/controllers/nonjs_controller.rb" />
+-        <option value="$PROJECT_DIR$/config/routes.rb" />
+-        <option value="$PROJECT_DIR$/app/views/layouts/nonjs.html.erb" />
+-        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
+-        <option value="$PROJECT_DIR$/app/assets/stylesheets/nonjs.css" />
+-        <option value="$PROJECT_DIR$/app/assets/javascripts/nonjs.js" />
+-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+-        <option value="$PROJECT_DIR$/app/assets/stylesheets/landing/index.css.scss.erb" />
+-        <option value="$PROJECT_DIR$/Bowerfile" />
+-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+-        <option value="$PROJECT_DIR$/app/assets/javascripts/internal_footer.js" />
+-        <option value="$PROJECT_DIR$/app/views/property_data/index.html.erb" />
+-        <option value="$PROJECT_DIR$/app/controllers/property_data_controller.rb" />
+-        <option value="$PROJECT_DIR$/app/views/property_data/show.html.erb" />
+-        <option value="$PROJECT_DIR$/db/migrate/20141107044746_add_img_url_column.rb" />
+-        <option value="$PROJECT_DIR$/app/models/property.rb" />
+-        <option value="$PROJECT_DIR$/app/views/properties/index.html.erb" />
+-        <option value="$PROJECT_DIR$/config/database.yml" />
+-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+-        <option value="$PROJECT_DIR$/app/views/layouts/rails.html.erb" />
+-        <option value="$PROJECT_DIR$/app/views/properties/_form.html.erb" />
+-        <option value="$PROJECT_DIR$/app/views/properties/edit.html.erb" />
+-        <option value="$PROJECT_DIR$/app/controllers/properties_controller.rb" />
+-        <option value="$PROJECT_DIR$/app/views/property_details/show.html.erb" />
+-        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+-        <option value="$PROJECT_DIR$/app/views/layouts/_internal_navigation.html.erb" />
+-        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/CanvasController.js" />
+-        <option value="$PROJECT_DIR$/app/assets/javascripts/landing/index.js" />
+-        <option value="$PROJECT_DIR$/config/newrelic.yml" />
+-        <option value="$PROJECT_DIR$/app/views/layouts/_internal_navigation_links.html.erb" />
+-        <option value="$PROJECT_DIR$/app/controllers/images_controller.rb" />
+-        <option value="$PROJECT_DIR$/app/controllers/property_details_controller.rb" />
+-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+         <option value="$PROJECT_DIR$/Gemfile" />
+-        <option value="$PROJECT_DIR$/config/application.rb" />
+-        <option value="$PROJECT_DIR$/app/models/config.rb" />
+-        <option value="$PROJECT_DIR$/db/migrate/20141113233232_create_configs.rb" />
+-        <option value="$PROJECT_DIR$/db/migrate/20141113233232_create_config_vars.rb" />
+-        <option value="$PROJECT_DIR$/app/models/config_var.rb" />
+-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+       </list>
+     </option>
+   </component>
++  <component name="JsGulpfileManager">
++    <detection-done>true</detection-done>
++  </component>
+   <component name="ProjectFrameBounds">
+-    <option name="x" value="163" />
+-    <option name="y" value="103" />
++    <option name="x" value="396" />
++    <option name="y" value="49" />
+     <option name="width" value="1301" />
+     <option name="height" value="943" />
+   </component>
+@@ -238,8 +124,6 @@
+       <sortByType />
+     </navigator>
+     <panes>
+-      <pane id="RailsProjectView" />
+-      <pane id="Scope" />
+       <pane id="ProjectPane">
+         <subPane>
+           <PATH>
+@@ -258,94 +142,14 @@
+               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+             </PATH_ELEMENT>
+           </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="db" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="db" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="migrate" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="app" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="app" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="models" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="propertywrap" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="app" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="controllers" />
+-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+-            </PATH_ELEMENT>
+-          </PATH>
+         </subPane>
+       </pane>
++      <pane id="Scope" />
++      <pane id="RailsProjectView" />
+     </panes>
+   </component>
+   <component name="PropertiesComponent">
+-    <property name="options.lastSelected" value="reference.settingsdialog.project.vagrant" />
++    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+     <property name="options.splitter.main.proportions" value="0.3" />
+     <property name="options.splitter.details.proportions" value="0.2" />
+     <property name="options.searchVisible" value="true" />
+@@ -353,6 +157,7 @@
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="recentsLimit" value="5" />
+     <property name="FullScreen" value="false" />
++    <property name="restartRequiresConfirmation" value="true" />
+   </component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+@@ -363,7 +168,7 @@
+       <recent name="$PROJECT_DIR$/app/views/layouts" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Rails.Development: propertywrap">
++  <component name="RunManager" selected="Ruby remote debug.remote rails">
+     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
+       <module name="" />
+       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+@@ -374,11 +179,6 @@
+       <envs />
+       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-        <COVERAGE_PATTERN ENABLED="true">
+-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-        </COVERAGE_PATTERN>
+-      </EXTENSION>
+       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
+       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+@@ -399,11 +199,6 @@
+       <envs />
+       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-        <COVERAGE_PATTERN ENABLED="true">
+-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-        </COVERAGE_PATTERN>
+-      </EXTENSION>
+       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+@@ -425,11 +220,6 @@
+       <envs />
+       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-        <COVERAGE_PATTERN ENABLED="true">
+-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-        </COVERAGE_PATTERN>
+-      </EXTENSION>
+       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+@@ -456,11 +246,6 @@
+       <envs />
+       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-        <COVERAGE_PATTERN ENABLED="true">
+-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-        </COVERAGE_PATTERN>
+-      </EXTENSION>
+       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+@@ -480,11 +265,6 @@
+       <envs />
+       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-        <COVERAGE_PATTERN ENABLED="true">
+-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-        </COVERAGE_PATTERN>
+-      </EXTENSION>
+       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+@@ -497,11 +277,38 @@
+       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+       <method />
+     </configuration>
+-    <list size="4">
+-      <item index="0" class="java.lang.String" itemvalue="Rake.test: propertywrap" />
+-      <item index="1" class="java.lang.String" itemvalue="Rake.spec: propertywrap" />
+-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: propertywrap" />
+-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: propertywrap" />
++    <configuration default="true" type="RubyRemoteDebugConfigurationType" factoryName="Ruby remote debug">
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_HOST" VALUE="localhost" />
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="PORT" VALUE="1234" />
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="DISPATCHER_PORT" VALUE="26162" />
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_ROOT" VALUE="" />
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="LOCAL_ROOT" VALUE="" />
++      <method />
++    </configuration>
++    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
++      <node-options />
++      <gulpfile />
++      <tasks />
++      <pass-parent-envs>true</pass-parent-envs>
++      <envs />
++      <method />
++    </configuration>
++    <configuration default="false" name="remote rails" type="RubyRemoteDebugConfigurationType" factoryName="Ruby remote debug" editBeforeRun="true">
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_HOST" VALUE="localhost" />
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="PORT" VALUE="1234" />
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="DISPATCHER_PORT" VALUE="26162" />
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_ROOT" VALUE="/vagrant/properwrap" />
++      <RUBY_REMOTE_DEBUG_CONFIG NAME="LOCAL_ROOT" VALUE="$PROJECT_DIR$" />
++      <RunnerSettings RunnerId="RubyRemoteDebugRunner" />
++      <ConfigurationWrapper RunnerId="RubyRemoteDebugRunner" />
++      <method />
++    </configuration>
++    <list size="5">
++      <item index="0" class="java.lang.String" itemvalue="Rails.Production: propertywrap" />
++      <item index="1" class="java.lang.String" itemvalue="Rails.Development: propertywrap" />
++      <item index="2" class="java.lang.String" itemvalue="Rake.test: propertywrap" />
++      <item index="3" class="java.lang.String" itemvalue="Rake.spec: propertywrap" />
++      <item index="4" class="java.lang.String" itemvalue="Ruby remote debug.remote rails" />
+     </list>
+   </component>
+   <component name="ShelveChangesManager" show_recycled="false">
+@@ -513,6 +320,10 @@
+       <option name="PATH" value="$USER_HOME$/.RubyMine60/config/shelf/menu.patch" />
+       <option name="DESCRIPTION" value="menu" />
+     </changelist>
++    <changelist date="1416123750655">
++      <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/fixed_image_and_new_oauth_token.patch" />
++      <option name="DESCRIPTION" value="fixed image and new oauth token" />
++    </changelist>
+   </component>
+   <component name="SvnConfiguration">
+     <configuration />
+@@ -521,118 +332,168 @@
+     <task active="true" id="Default" summary="Default task">
+       <changelist id="258a8685-9baa-48ce-a3e6-db703ff2dbb0" name="Default" comment="" />
+       <created>1415272017955</created>
++      <option name="number" value="Default" />
+       <updated>1415272017955</updated>
+     </task>
+     <task id="LOCAL-00001" summary="first attempt - html not being brought in">
+       <created>1415274123273</created>
++      <option name="number" value="00001" />
++      <option name="project" value="LOCAL" />
+       <updated>1415274123273</updated>
+     </task>
+     <task id="LOCAL-00002" summary="first attempt - html not being brought in">
+       <created>1415277544706</created>
++      <option name="number" value="00002" />
++      <option name="project" value="LOCAL" />
+       <updated>1415277544706</updated>
+     </task>
+     <task id="LOCAL-00003" summary="more angular">
+       <created>1415277890923</created>
++      <option name="number" value="00003" />
++      <option name="project" value="LOCAL" />
+       <updated>1415277890923</updated>
+     </task>
+     <task id="LOCAL-00004" summary="more angular">
+       <created>1415279675185</created>
++      <option name="number" value="00004" />
++      <option name="project" value="LOCAL" />
+       <updated>1415279675185</updated>
+     </task>
+     <task id="LOCAL-00005" summary="d3">
+       <created>1415279937935</created>
++      <option name="number" value="00005" />
++      <option name="project" value="LOCAL" />
+       <updated>1415279937935</updated>
+     </task>
+     <task id="LOCAL-00006" summary="Property styling">
+       <created>1415281792948</created>
++      <option name="number" value="00006" />
++      <option name="project" value="LOCAL" />
+       <updated>1415281792948</updated>
+     </task>
+     <task id="LOCAL-00007" summary="Property styling">
+       <created>1415282572188</created>
++      <option name="number" value="00007" />
++      <option name="project" value="LOCAL" />
+       <updated>1415282572188</updated>
+     </task>
+     <task id="LOCAL-00008" summary="Property styling">
+       <created>1415282848804</created>
++      <option name="number" value="00008" />
++      <option name="project" value="LOCAL" />
+       <updated>1415282848804</updated>
+     </task>
+     <task id="LOCAL-00009" summary="homepage">
+       <created>1415283968304</created>
++      <option name="number" value="00009" />
++      <option name="project" value="LOCAL" />
+       <updated>1415283968304</updated>
+     </task>
+     <task id="LOCAL-00010" summary="homepage">
+       <created>1415285361807</created>
++      <option name="number" value="00010" />
++      <option name="project" value="LOCAL" />
+       <updated>1415285361807</updated>
+     </task>
+     <task id="LOCAL-00011" summary="tidy up">
+       <created>1415285749208</created>
++      <option name="number" value="00011" />
++      <option name="project" value="LOCAL" />
+       <updated>1415285749208</updated>
+     </task>
+     <task id="LOCAL-00012" summary="Fixed up">
+       <created>1415287576514</created>
++      <option name="number" value="00012" />
++      <option name="project" value="LOCAL" />
+       <updated>1415287576514</updated>
+     </task>
+     <task id="LOCAL-00013" summary="Fixed up">
+       <created>1415289362218</created>
++      <option name="number" value="00013" />
++      <option name="project" value="LOCAL" />
+       <updated>1415289362218</updated>
+     </task>
+     <task id="LOCAL-00014" summary="API error handling">
+       <created>1415299596492</created>
++      <option name="number" value="00014" />
++      <option name="project" value="LOCAL" />
+       <updated>1415299596492</updated>
+     </task>
+     <task id="LOCAL-00015" summary="Image fixes">
+       <created>1415307192222</created>
++      <option name="number" value="00015" />
++      <option name="project" value="LOCAL" />
+       <updated>1415307192222</updated>
+     </task>
+     <task id="LOCAL-00016" summary="api">
+       <created>1415307588382</created>
++      <option name="number" value="00016" />
++      <option name="project" value="LOCAL" />
+       <updated>1415307588382</updated>
+     </task>
+     <task id="LOCAL-00017" summary="menu">
+       <created>1415309763606</created>
++      <option name="number" value="00017" />
++      <option name="project" value="LOCAL" />
+       <updated>1415309763606</updated>
+     </task>
+     <task id="LOCAL-00018" summary="menu">
+       <created>1415313672219</created>
++      <option name="number" value="00018" />
++      <option name="project" value="LOCAL" />
+       <updated>1415313672219</updated>
+     </task>
+     <task id="LOCAL-00019" summary="menu">
+       <created>1415793823310</created>
++      <option name="number" value="00019" />
++      <option name="project" value="LOCAL" />
+       <updated>1415793823310</updated>
+     </task>
+     <task id="LOCAL-00020" summary="remove name refs">
+       <created>1415794209568</created>
++      <option name="number" value="00020" />
++      <option name="project" value="LOCAL" />
+       <updated>1415794209568</updated>
+     </task>
+     <task id="LOCAL-00021" summary="fixed image and new oauth token">
+       <created>1415878721068</created>
++      <option name="number" value="00021" />
++      <option name="project" value="LOCAL" />
+       <updated>1415878721068</updated>
+     </task>
+-    <option name="localTasksCounter" value="22" />
++    <task id="LOCAL-00022" summary="fixed image and new oauth token">
++      <created>1416123751017</created>
++      <option name="number" value="00022" />
++      <option name="project" value="LOCAL" />
++      <updated>1416123751017</updated>
++    </task>
++    <option name="localTasksCounter" value="23" />
+     <servers />
+   </component>
+   <component name="ToolWindowManager">
+-    <frame x="163" y="103" width="1301" height="943" extended-state="0" />
++    <frame x="396" y="49" width="1301" height="943" extended-state="0" />
+     <editor active="false" />
+     <layout>
+-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43963555" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37926972" sideWeight="0.30151153" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4393404" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5253239" sideWeight="0.30151153" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41696113" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37573615" sideWeight="0.56563246" order="1" side_tool="false" content_ui="tabs" />
+       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26332536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37926972" sideWeight="0.6984885" order="7" side_tool="true" content_ui="tabs" />
++      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
++      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27525854" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
++      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39929327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.49960223" order="2" side_tool="false" content_ui="tabs" />
++      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
++      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3783784" sideWeight="0.6984885" order="7" side_tool="true" content_ui="tabs" />
+       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20380434" sideWeight="0.6099831" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
++      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37573615" sideWeight="0.56563246" order="1" side_tool="false" content_ui="tabs" />
+       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
++      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+     </layout>
+     <layout-to-restore>
+       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+@@ -651,9 +512,9 @@
+       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24315515" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
++      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+     </layout-to-restore>
+   </component>
+   <component name="Vcs.Log.UiProperties">
+@@ -688,15 +549,9 @@
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager />
++    <watches-manager />
+   </component>
+   <component name="editorHistoryManager">
+-    <entry file="file://$PROJECT_DIR$/app/views/properties/show.html.erb">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state vertical-scroll-proportion="-1.0017793" vertical-offset="563" max-vertical-offset="1125">
+-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+-        </state>
+-      </provider>
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/Bowerfile">
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.19480519" vertical-offset="0" max-vertical-offset="231">
+@@ -743,7 +598,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="669">
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -751,7 +605,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="647">
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -759,7 +612,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.19354838" vertical-offset="0" max-vertical-offset="465">
+           <caret line="6" column="26" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="26" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -767,7 +619,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="669">
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -775,7 +626,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+           <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -811,7 +661,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.23751523" vertical-offset="0" max-vertical-offset="821">
+           <caret line="13" column="39" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -875,7 +724,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.42213884" vertical-offset="270" max-vertical-offset="855">
+           <caret line="33" column="36" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -946,7 +794,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.29239765" vertical-offset="420" max-vertical-offset="1215">
+           <caret line="38" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -954,7 +801,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="2.22" vertical-offset="0" max-vertical-offset="1710">
+           <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -962,7 +808,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.4054054" vertical-offset="105" max-vertical-offset="1335">
+           <caret line="22" column="58" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -970,7 +815,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="1.0416666" vertical-offset="130" max-vertical-offset="1470">
+           <caret line="7" column="79" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -978,23 +822,13 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.65312046" vertical-offset="0" max-vertical-offset="689">
+           <caret line="30" column="50" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/Gemfile">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1170">
+-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+-          <folding />
+-        </state>
+-      </provider>
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/app/controllers/property_details_controller.rb">
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1320">
+           <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -1002,7 +836,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
+           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="26" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -1010,7 +843,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -1018,7 +850,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -1026,7 +857,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="30" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -1034,7 +864,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="1410">
+           <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -1042,7 +871,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="3" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -1050,7 +878,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+           <caret line="9" column="119" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+@@ -1058,18 +885,31 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+           <caret line="3" column="21" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="21" />
+-          <folding />
+         </state>
+       </provider>
+     </entry>
+     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state vertical-scroll-proportion="0.74492097" vertical-offset="0" max-vertical-offset="600">
++        <state vertical-scroll-proportion="0.6776181" vertical-offset="0" max-vertical-offset="600">
+           <caret line="22" column="300" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/Vagrantfile">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
++          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+           <folding />
+         </state>
+       </provider>
+     </entry>
++    <entry file="file://$PROJECT_DIR$/Gemfile">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="-1.0053191" vertical-offset="378" max-vertical-offset="1200">
++          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
+   </component>
+-</project>
++</project>
+\ No newline at end of file
+-
+\ No newline at end of file
+Index: .idea/runConfigurations/Development__propertywrap.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/runConfigurations/Development__propertywrap.xml	(revision fd1757fcda2724a33e44c449de93abe44314a9fc)
++++ .idea/runConfigurations/Development__propertywrap.xml	(revision )
+@@ -10,17 +10,12 @@
+     <envs />
+     <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+     <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-    <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-      <COVERAGE_PATTERN ENABLED="true">
+-        <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-      </COVERAGE_PATTERN>
+-    </EXTENSION>
+     <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+-    <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
++    <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+     <method />
+\ No newline at end of file
+Index: .idea/runConfigurations/spec__propertywrap.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/runConfigurations/spec__propertywrap.xml	(revision fd1757fcda2724a33e44c449de93abe44314a9fc)
++++ .idea/runConfigurations/spec__propertywrap.xml	(revision )
+@@ -9,11 +9,6 @@
+     <envs />
+     <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+     <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-    <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-      <COVERAGE_PATTERN ENABLED="true">
+-        <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-      </COVERAGE_PATTERN>
+-    </EXTENSION>
+     <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+     <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+     <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+\ No newline at end of file
+Index: .idea/runConfigurations/Production__propertywrap.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/runConfigurations/Production__propertywrap.xml	(revision fd1757fcda2724a33e44c449de93abe44314a9fc)
++++ .idea/runConfigurations/Production__propertywrap.xml	(revision )
+@@ -10,11 +10,6 @@
+     <envs />
+     <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+     <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+-    <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+-      <COVERAGE_PATTERN ENABLED="true">
+-        <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+-      </COVERAGE_PATTERN>
+-    </EXTENSION>
+     <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+\ No newline at end of file
