@@ -3,7 +3,7 @@ class MapsController < ApplicationController
   layout 'maps'
 
   def index
-    @properties = Property.all
+    @properties = Property.where("lat IS NOT NULL")
     @hash = Gmaps4rails.build_markers(@properties) do |prop, marker|
       marker.lat prop.lat
       marker.lng prop.lon
