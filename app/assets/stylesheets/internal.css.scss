@@ -15,3 +15,8 @@
  *= require admin/mvpready-flat
  *= require_self
  */
+@media (max-width: 500px) {
+  div[class="col-xs-*"] {
+    float:none; width:100%;
+  }
+}

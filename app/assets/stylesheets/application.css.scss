@@ -19,3 +19,8 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
 
+@media (max-width: 500px) {
+  div[class="col-xs-*"] {
+    float:none; width:100%;
+  }
+}
