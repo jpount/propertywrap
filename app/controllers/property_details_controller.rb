@@ -45,7 +45,6 @@ class PropertyDetailsController < ApplicationController
       logger.warn "Error calling the API: #{e}"
       @response = {}
     end
-
     respond_with(@response)
   end
 

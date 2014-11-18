@@ -6,7 +6,14 @@ class PropertiesController < ApplicationController
     @q = Property.search(params[:q])
     @properties = @q.result.order(:city).page(params[:page])
     respond_with(@properties)
+  end
 
+  def maps
+    @properties = Property.all
+    @hash = Gmaps4rails.build_markers(@properties) do |prop, marker|
+      marker.lat prop.lat
+      marker.lng prop.lon
+    end
   end
 
   def show
@@ -64,13 +71,17 @@ class PropertiesController < ApplicationController
       @propertyId = lookup(@address)
       @json_response = RestClient.get(
           "https://rpgateway-uat.rpdata.com/bsg-au/v1/property/#{@propertyId}.json",
-          :params => {:returnFields => 'propertyPhotoList'},
+          :params => {:returnFields => 'propertyPhotoList,coordinate'},
           :content_type => :json, :accept => :json, :Authorization => 'Bearer ' + @auth_token)
       @resp = JSON.parse(@json_response)
       if @resp['property'].blank?
         prop.img_url = 'image-missing.png'
       else
         prop.img_url = @resp['property']['propertyPhotoList'].first['mediumPhotoUrl']
+        if !@resp['property']['coordinate'].blank?
+          prop.lat = @resp['property']['coordinate']['latitude']
+          prop.lon = @resp['property']['coordinate']['longitude']
+        end
       end
     rescue Exception => e
       logger.warn "Error calling the API: #{e}"

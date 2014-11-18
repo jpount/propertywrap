@@ -21,8 +21,30 @@
 
       <ul class="nav navbar-nav navbar-right">
 
-        <li>
-          <%= link_to 'Properties', properties_path %>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+            Properties&nbsp;
+            <i class="fa fa-caret-down"></i>
+          </a>
+
+          <ul class="dropdown-menu" role="menu">
+
+            <li>
+              <a href="<%= properties_path %>">
+                <i class="fa fa-list"></i>
+                &nbsp;&nbsp;List View
+              </a>
+            </li>
+
+            <li class="divider"></li>
+
+            <li>
+              <a href="<%= maps_path %>">
+                <i class="fa fa-globe"></i>
+                &nbsp;&nbsp;Map View
+              </a>
+            </li>
+          </ul>
         </li>
 
         <li>

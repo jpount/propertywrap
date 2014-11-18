@@ -35,6 +35,8 @@ gem 'ransack'
 
 gem "font-awesome-rails"
 
+gem 'gmaps4rails'
+
 group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'

@@ -16,3 +16,5 @@
 //= require admin/libs/bootstrap.min
 //= require admin/mvpready-core
 //= require admin/mvpready-admin
+//= require internal/underscore
+//= require gmaps/google

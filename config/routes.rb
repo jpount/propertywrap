@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   get '/nonjs', to: 'nonjs#index'
 
+  get '/maps', to: 'maps#index'
+
 end  
